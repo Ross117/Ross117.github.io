@@ -1,0 +1,25 @@
+body {
+  background: #f9fafb;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 30px;
+}
+
+.heading {
+  margin-left: 10px;
+}
+
+.heading p {
+  font-style: italic;
+}
+
+.markdown-field {
+  display: inline-block;
+}
+
+.html-field {
+  display: inline-block;
+  /*background color courtesy of http://www.colourlovers.com/color/D6C7C0/Smoking_At_My_Desk*/
+  background-color: #D6C7C0;
+}
