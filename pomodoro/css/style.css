@@ -1,0 +1,41 @@
+h1 {
+  margin-bottom: 20px;
+  font-size: 50px;
+}
+
+input {
+  margin: 10px;
+  font-size: 20px;
+  width: 100px;
+}
+
+button {
+  margin: 10px;
+}
+
+.userPrompts {
+  margin-bottom: 20px;
+}
+
+.errMsg {
+  font-style: italic;
+  font-weight: 900;
+  color: #F20C0C;
+}
+
+.indicator {
+  font-size: 45px;
+  font-style: italic;
+}
+
+.clockContainer {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.clock {
+  font-size: 70px;
+  width: 300px;
+  background-color: #D06B6B;
+  border: 8px solid black;
+}

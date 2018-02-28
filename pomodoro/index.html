@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Pomodoro Clock</title>
+  <meta charset="utf-8">
+<title>Pomodoro Clock</title>
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <div class="container-fluid">
+
+  <audio class="timer" src="https://www.soundjay.com/clock/sounds/alarm-clock-01.mp3" autostart="false"></audio>
+
+  <div class="row">
+    <div class="mx-auto">
+      <h1>Pomodoro Clock</h1>
+     </div>
+  </div>
+
+  <div class="row">
+    <div class="mx-auto userPrompts">
+      <form class="form-inline">
+        <div class="form-group">
+          <label>Work:<input type="text" id="workTime" class="prompt text-center" value="00:25:00" /></label>
+          <label>Break:<input type="text" id="breakTime" class="prompt text-center" value="00:05:00" /></label>
+          <label class="errMsg"></label>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="mx-auto clockContainer">
+      <p class="indicator text-center">Work Time</p>
+        <input type="text" class="clock text-center" value="00:25:00" readonly />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="mx-auto userButtons">
+      <button type="button" class="btn btn-info startClock">Start Clock</button>
+      <button type="button" class="btn btn-info pauseClock">Pause Clock</button>
+    </div>
+  </div>
+
+</div>
+  
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
