@@ -1,0 +1,21 @@
+body {
+  font-family: Verdana, sans-serif;
+}    
+    
+.randomArticle {
+  margin: 10px;
+}
+
+.userInput {
+  width: 330px;
+  display: block;
+}
+
+.subtitle {
+  font-style: italic;
+}
+
+.searchResults {
+  margin-left: 70px;
+  margin-right: 70px;
+}
