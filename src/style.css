@@ -1,20 +1,29 @@
 nav li {
   display: inline;
+  margin-right: 10px;
+  font-size: 30px;
 }
 
-.project {
-  margin: 20px;
-}
-
-.screenshot {
-  border: solid;
+.row {
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 
 .projectInfo {
+  width: 500px;
   border: solid;
 }
 
+.projectInfo a {
+  font-size: 30px;
+}
+
 .screenshot img {
-  width: 600px;
+  width: 500px;
   height: 350px;
+  border: solid;
+}
+
+.placeholder {
+  font-size: 30px;
 }
