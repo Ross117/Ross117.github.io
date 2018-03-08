@@ -1,6 +1,6 @@
 nav li {
   display: inline;
-  margin-right: 10px;
+  margin-right: 20px;
   font-size: 30px;
 }
 
@@ -9,21 +9,7 @@ nav li {
   margin-bottom: 20px;
 }
 
-.projectInfo {
-  width: 500px;
-  border: solid;
-}
-
-.projectInfo a {
-  font-size: 30px;
-}
-
-.screenshot img {
-  width: 500px;
+.project img {
   height: 350px;
-  border: solid;
-}
-
-.placeholder {
-  font-size: 30px;
+  border-bottom: solid;
 }
