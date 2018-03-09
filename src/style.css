@@ -4,6 +4,10 @@ nav li {
   font-size: 30px;
 }
 
+.title {
+  font-size: 60px;
+}
+
 .row {
   margin-top: 30px;
   margin-bottom: 20px;
@@ -11,5 +15,9 @@ nav li {
 
 .project img {
   height: 350px;
-  border-bottom: solid;
+  margin-bottom: 10px;
+}
+
+.projectInfo {
+  border-top: solid;
 }

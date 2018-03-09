@@ -16,24 +16,26 @@
     <header>
       <nav>
         <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Portfolio</a></li>
+          <li><a href="#aboutMe">About</a></li>
+          <li><a href="#portfolioContainer">Portfolio</a></li>
         </ul>
       </nav>
     </header>
 
-    <h1 class="text-center">Ross Morran</h1>
+    <div>
+      <h1 class="text-center title">Ross Morran</h1>
+    </div>
 
     <br><br>
 
-    <div class="aboutMe">
+    <div id="aboutMe">
       <h2 class="text-center">About Me</h2>
       <p class="text-center">Brief profile</p>
     </div>
 
     <br><br>
 
-    <div class="portfolioContainer">
+    <div id="portfolioContainer">
 
       <h2 class="text-center">My Portfolio</h2>
       <p class="text-center">Click the links to view the projects!</p>
@@ -41,16 +43,17 @@
       <div class="row">
         <div class="col-sm-5 mx-auto card project">
           <img class="card-img-top" src="pomodoro\screenshot.PNG" alt="Pomodoro Clock">
-          <div class="card-block">
-            <h2 class="card-title"><a href="https://ross117.github.io/pomodoro/">Pomodoro Clock</a></h2>
-            <p class="card-text">A web application which functions as a productivity tool.</p>
+          <div class="card-block projectInfo">
+            <h2 class="card-title"><a class="card-link" href="https://ross117.github.io/pomodoro/" target="_blank">Pomodoro Clock</a></h2>
+            <p class="card-text">A productivity tool. Set how long you want to work for, and how long your breaks are going to be.
+              Then start the countdown!</p>
           </div>
         </div>
         <div class="col-sm-5 mx-auto card project">
           <img class="card-img-top" src="calculator\screenshot.PNG" alt="Pocket Calculator">
-          <div class="card-block">
-            <h2 class="card-title"><a href="https://ross117.github.io/calculator/">Pocket Calculator</a></h2>
-            <p class="card-text">A web app which functions as a 'pocket' calculator. The user can enter calculations and view the output.</p>
+          <div class="card-block projectInfo">
+            <h2 class="card-title"><a class="card-link" href="https://ross117.github.io/calculator/" target="_blank">Pocket Calculator</a></h2>
+            <p class="card-text">A simple 'pocket' calculator.</p>
           </div>
         </div>
       </div>
@@ -58,16 +61,17 @@
       <div class="row">
         <div class="col-sm-5 mx-auto card project">
           <img class="card-img-top" src="markdown\screenshot.PNG" alt="Markdown Previewer">
-          <div class="card-block">
-            <h2 class="card-title"><a href="https://ross117.github.io/markdown/">Markdown Previewer</a></h2>
-            <p class="card-text">A Markdown to HTML conversion tool.</p>
+          <div class="card-block projectInfo">
+            <h2 class="card-title"><a class="card-link" href="https://ross117.github.io/markdown/" target="_blank">Markdown Previewer</a></h2>
+            <p class="card-text">A tool which allows you to write Markdown and instantly see what it looks like in HTML.</p>
           </div>
         </div>
         <div class="col-sm-5 mx-auto card project">
           <img class="card-img-top" src="leaderboard\screenshot.PNG" alt="Free Code Camp Leaderboard">
-          <div class="card-block">
-            <h2 class="card-title"><a href="https://ross117.github.io/leaderboard/">Free Code Camp Leaderboard</a></h2>
-            <p class="card-text">A leaderboard for the Free Code Camp online community.</p>
+          <div class="card-block projectInfo">
+            <h2 class="card-title"><a class="card-link" href="https://ross117.github.io/leaderboard/" target="_blank">Free Code Camp Leaderboard</a></h2>
+            <p class="card-text">A leaderboard for the Free Code Camp online community.
+              See which users have earned the most points recently, which ones have the most all time points.</p>
           </div>
         </div>
       </div>
@@ -75,16 +79,16 @@
      <div class="row">
         <div class="col-sm-5 mx-auto card project">
           <img class="card-img-top" src="localweather\screenshot.PNG" alt="Local Weather App">
-          <div class="card-block">
-            <h2 class="card-title"><a href="https://ross117.github.io/localweather/">Local Weather App</a></h2>
-            <p class="card-text">A web app which shows the current state of the weather in the user's location.</p>
+          <div class="card-block projectInfo">
+            <h2 class="card-title"><a class="card-link" href="https://ross117.github.io/localweather/" target="_blank">Local Weather App</a></h2>
+            <p class="card-text">See what the weather's like in your current location.</p>
           </div>
         </div>
         <div class="col-sm-5 mx-auto card project">
           <img class="card-img-top" src="twitchtv\screenshot.PNG" alt="Twitch TV App">
-          <div class="card-block">
-            <h2 class="card-title"><a href="https://ross117.github.io/twitchtv/">Twitch TV App</a></h2>
-            <p class="card-text">A web app which allows the user to see the current streaming status of a selection of 8 Twitch.tv channels.</p>
+          <div class="card-block projectInfo">
+            <h2 class="card-title"><a class="card-link" href="https://ross117.github.io/twitchtv/" target="_blank">Twitch TV App</a></h2>
+            <p class="card-text">Check the current streaming status of a selection of Twitch.tv channels.</p>
           </div>
         </div>
       </div>
@@ -92,16 +96,16 @@
       <div class="row">
         <div class="col-sm-5 mx-auto card project">
           <img class="card-img-top" src="randomquote\screenshot.PNG" alt="Random Quote Generator">
-          <div class="card-block">
-            <h2 class="card-title"><a href="https://ross117.github.io/randomquote/">Random Quote Generator</a></h2>
-            <p class="card-text">A web application which generates random quotes.</p>
+          <div class="card-block projectInfo">
+            <h2 class="card-title"><a class="card-link" href="https://ross117.github.io/randomquote/" target="_blank">Random Quote Generator</a></h2>
+            <p class="card-text">Generate random quotes on the subject of design.</p>
           </div>
         </div>
         <div class="col-sm-5 mx-auto card project">
           <img class="card-img-top" src="wiki\screenshot.PNG" alt="Wikipedia Viewer">
-          <div class="card-block">
-            <h2 class="card-title"><a href="https://ross117.github.io/wiki/">Wikipedia Viewer</a></h2>
-            <p class="card-text">A web app which allows the user to search Wikipedia for a topic.</p>
+          <div class="card-block projectInfo">
+            <h2 class="card-title"><a class="card-link" href="https://ross117.github.io/wiki/" target="_blank">Wikipedia Viewer</a></h2>
+            <p class="card-text">Search Wikipedia for a topic and view the results.</p>
           </div>
         </div>
       </div>
@@ -109,9 +113,9 @@
       <div class="row">
         <div class="col-sm-5 mx-auto card project">
           <img class="card-img-top" src="budgetplanner\screenshot.PNG" alt="Budget Planner">
-          <div class="card-block">
-            <h2 class="card-title"><a href="https://ross117.github.io/budgetplanner/">Budget Planner</a></h2>
-            <p class="card-text">A web application which functions as a budget planner.</p>
+          <div class="card-block projectInfo">
+            <h2 class="card-title"><a class="card-link" href="https://ross117.github.io/budgetplanner/" target="_blank">Budget Planner</a></h2>
+            <p class="card-text">A tool which helps you to plan your budget.</p>
           </div>
         </div>
         <div class="col-sm-5 mx-auto card project">
