@@ -1,3 +1,7 @@
+/*add font styling */
+
+/* add container background colours */
+
 nav li {
   display: inline;
   margin-right: 20px;
@@ -6,6 +10,11 @@ nav li {
 
 .title {
   font-size: 60px;
+}
+
+.email {
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .row {
