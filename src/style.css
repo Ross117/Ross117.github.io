@@ -1,15 +1,17 @@
-/*add font styling */
+/* add font styling */
+body {
+  font-family: sans-serif;
+  padding-top: 70px;
+}
 
 /* add container background colours */
 
-nav li {
-  display: inline;
-  margin-right: 20px;
-  font-size: 30px;
-}
-
 .title {
   font-size: 60px;
+}
+
+.subHeading {
+  padding-top: 70px;
 }
 
 .email {
