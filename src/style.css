@@ -1,13 +1,12 @@
-/* add font styling */
 body {
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
   padding-top: 70px;
 }
 
 /* add container background colours */
 
-.title {
-  font-size: 60px;
+.heading {
+  font-size: 50px;
 }
 
 .subHeading {
@@ -24,9 +23,18 @@ body {
   margin-bottom: 20px;
 }
 
+.divider {
+  height: 20px;
+  background-color: black;
+}
+
 .project img {
   height: 350px;
   margin-bottom: 10px;
+}
+
+.project img:hover {
+  border: solid black;
 }
 
 .projectInfo {
