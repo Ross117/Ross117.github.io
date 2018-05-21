@@ -4,8 +4,6 @@ A Pen created at CodePen.io. You can find this one at https://codepen.io/Ross_87
 
 A Free Code Camp project.
 
-Built using JavaScript, HTML and CSS, along with the Bootstrap framework.
+Built using JavaScript, HTML and CSS.
 
 Alarm audio courtesy of www.soundjay.com.
-
-PLEASE NOTE: not currently compatible with the Microsoft Internet Explorer or Microsoft Edge browsers.

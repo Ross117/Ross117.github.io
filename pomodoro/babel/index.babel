@@ -1,14 +1,16 @@
-'use strict';
+const pomodoroClock = (function () {
+  "use strict";
 
-const pomodoroClock = (function createClock() {
-  const workTime = document.querySelector('#workTime');
-  const breakTime = document.querySelector('#breakTime');
-  const startBtn = document.querySelector('.startClock');
-  const errMsg = document.querySelector('.errMsg');
-  const promptChange = { workTime: false, breakTime: false };
+  const workTime = document.querySelector(".workTime");
+  const breakTime = document.querySelector(".breakTime");
+  const startBtn = document.querySelector(".js-start-clock");
+  const pauseBtn = document.querySelector(".js-pause-clock");
+  const errMsg = document.querySelector(".js-err-msg");
   let intervalID = 0;
   let clockPaused = false;
   let isABreak = false;
+  let promptChange = {'workTime': false, 'breakTime': false};
+  let tme;
 
   const validation = (inputEvent) => {
     const inputEle = inputEvent.target;
@@ -18,17 +20,14 @@ const pomodoroClock = (function createClock() {
 
     // check length & characters
     if (timeStr.match(re) !== null) {
-      // handle cross browser differences in the input event object
-      if (inputEvent.srcElement !== undefined) {
-        promptChange[inputEvent.srcElement.id] = true;
-      } else if (inputEvent.target !== undefined) {
-        promptChange[inputEvent.target.id] = true;
-      }
+      promptChange[inputEle.className] = true;
       startBtn.disabled = false;
+      pauseBtn.disabled = false;
       inputEle.style.background = '#FFFFFF';
       errMsg.innerText = '';
     } else {
       startBtn.disabled = true;
+      pauseBtn.disabled = true;
       inputEle.style.background = '#C02424';
       errMsg.innerText = 'hh:mm:ss';
     }
@@ -45,8 +44,7 @@ const pomodoroClock = (function createClock() {
   };
 
   const startClock = () => {
-    const clock = document.querySelector('.clock');
-    let tme;
+    const clock = document.querySelector(".js-clock");
 
     // converts a time string to a date value, and sets the clock's initial value
     const setTime = (timeStr) => {
@@ -62,20 +60,22 @@ const pomodoroClock = (function createClock() {
     // start the pomodoro clock countdown
     const countdown = () => {
       // handle transitions between work periods and break periods
-      if (clock.value === '00:00:00') {
+      // mutiple date object functions in if statement used as a workaround
+      // to handle Edge/IE bug when checking value of the clock input element.
+      // (clock.value === '00:00:00' never returns 'true' in MS browsers)
+      if (tme.getHours() === 0 && tme.getMinutes() === 0 && tme.getSeconds() === 0) {
         clearInterval(intervalID);
-        document.querySelector('.timer').play();
+        document.querySelector(".js-timer").play();
         if (!isABreak) {
           isABreak = true;
-          document.querySelector('.indicator').innerText = 'Break Time';
+          document.querySelector(".js-indicator").innerText = "Break Time";
           tme = setTime(breakTime.value);
-          intervalID = setInterval(countdown, 1000);
         } else {
           isABreak = false;
-          document.querySelector('.indicator').innerText = 'Work Time';
+          document.querySelector(".js-indicator").innerText = "Work Time";
           tme = setTime(workTime.value);
-          intervalID = setInterval(countdown, 1000);
         }
+        intervalID = setInterval(countdown, 1000);
       }
 
       // decrement clock time by 1 second
@@ -83,6 +83,7 @@ const pomodoroClock = (function createClock() {
       // display on the web document
       clock.value = tme.toLocaleTimeString('en-GB');
     };
+
     if (workTime.value === '00:00:00' || breakTime.value === '00:00:00') {
       errMsg.innerText = 'Be sure to enter a duration for each period!';
       return;
@@ -95,13 +96,11 @@ const pomodoroClock = (function createClock() {
     // ensure clock responds to user interaction
     if (!clockPaused) {
       tme = setTime(workTime.value);
-      document.querySelector('.indicator').innerText = 'Work Time';
+      document.querySelector(".js-indicator").innerText = "Work Time";
     } else if (promptChange.workTime && !isABreak) {
       tme = setTime(workTime.value);
     } else if (promptChange.breakTime && isABreak) {
       tme = setTime(breakTime.value);
-    } else {
-      tme = setTime(clock.value);
     }
 
     clockPaused = false;
@@ -124,14 +123,14 @@ const pomodoroClock = (function createClock() {
   };
 }());
 
-document.querySelector('#workTime')
+document.querySelector('.workTime')
   .addEventListener('input', pomodoroClock.validation);
 
-document.querySelector('#breakTime')
+document.querySelector('.breakTime')
   .addEventListener('input', pomodoroClock.validation);
 
-document.querySelector('.startClock')
-  .addEventListener('click', pomodoroClock.startClock);
+document.querySelector(".js-start-clock")
+  .addEventListener("click", pomodoroClock.startClock);
 
-document.querySelector('.pauseClock')
-  .addEventListener('click', pomodoroClock.pauseClock);
+document.querySelector(".js-pause-clock")
+  .addEventListener("click", pomodoroClock.pauseClock);

@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <title>Pomodoro Clock</title>
   <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pomodoro Clock</title>
   
-  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.css'>
-
+  
       <link rel="stylesheet" href="css/style.css">
 
   
@@ -16,43 +16,37 @@
 
 <body>
 
-  <div class="container-fluid">
+  <audio class="js-timer" src="https://www.soundjay.com/clock/sounds/alarm-clock-01.mp3" autostart="false"></audio>
 
-  <audio class="timer" src="https://www.soundjay.com/clock/sounds/alarm-clock-01.mp3" autostart="false"></audio>
+  <div class="container">
 
-  <div class="row">
-    <div class="mx-auto">
-      <h1>Pomodoro Clock</h1>
-     </div>
-  </div>
+    <h1>Pomodoro Clock</h1>
 
-  <div class="row">
-    <div class="mx-auto userPrompts">
-      <form class="form-inline">
-        <div class="form-group">
-          <label>Work:<input type="text" id="workTime" class="prompt text-center" value="00:25:00" /></label>
-          <label>Break:<input type="text" id="breakTime" class="prompt text-center" value="00:05:00" /></label>
-          <label class="errMsg"></label>
+    <div class="form-container">
+      <form>
+        <div class="prompt">
+          <label>Work:<input type="text" class="workTime" value="00:25:00" /></label>
+        </div>
+        <div class="prompt">
+          <label>Break:<input type="text" class="breakTime" value="00:05:00" /></label>
         </div>
       </form>
     </div>
-  </div>
 
-  <div class="row">
-    <div class="mx-auto clockContainer">
-      <p class="indicator text-center">Work Time</p>
-        <input type="text" class="clock text-center" value="00:25:00" readonly />
+    <p class="err-msg js-err-msg"></p>
+
+    <p class="indicator js-indicator">Work Time</p>
+
+    <div class="clock-container">
+      <input type="text" class="clock js-clock" value="00:25:00" readonly />
     </div>
-  </div>
 
-  <div class="row">
-    <div class="mx-auto userButtons">
-      <button type="button" class="btn btn-info startClock">Start Clock</button>
-      <button type="button" class="btn btn-info pauseClock">Pause Clock</button>
+    <div class="btn-container">
+      <button type="button" class="js-start-clock">Start Clock</button>
+      <button type="button" class="js-pause-clock">Pause Clock</button>
     </div>
-  </div>
 
-</div>
+  </div>
   
   
 
