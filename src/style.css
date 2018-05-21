@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', Verdana, sans-serif;
+}
+
+.navBar {
+  position: fixed;
+  top: 10px;
+  width: 100%;
+}
+
+.navBar li {
+  float: left;
+  width: 90px;
+  margin-bottom: 20px;
+  list-style-type: none;
+  font-weight: bold;
+}
+
+.container {
+  clear: both;
+  width: 100%;
+  max-width: 1000px;
+  margin: 80px auto;
+}

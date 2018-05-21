@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"</meta>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
   <link rel="stylesheet" href="src\style.css">
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
@@ -11,31 +12,29 @@
 
 <body>
 
-  <div class="container">
+  <header>
+    <nav class="navBar">
+      <ol>
+        <li>
+          <a href="#aboutMe">About Me</a>
+        </li>
+        <li>
+          <a href="#contactMe">Contact Me</a>
+        </li>
+        <li>
+          <a href="#portfolioContainer">My Projects</a>
+        </li>
+      </ol>
+    </nav>
+  </header>
 
-    <header>
-      <nav class="">
-        <ul class="">
-          <li class="">
-            <a href="#aboutMe"><b>About Me</b></a>
-          </li>
-          <li class="">
-            <a href="#contactMe"><b>Contact Me</b></a>
-          </li>
-          <li class="">
-            <a href="#portfolioContainer"><b>My Projects</b></a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+  <div class="container">
 
     <h1>Ross Morran</h1>
 
     <div class="">
       <img src="MyPhoto.jpg" alt="My Photo">
     </div>
-
-    <div class=""></div>
 
     <div class="" id="aboutMe">
       <h2 class="subHeading">About Me</h2>
@@ -53,17 +52,15 @@
       </p>
       <p>
         Please take a look at my projects. There's more coming soon!
-        You can also see my LinkedIn profile <a href="https://www.linkedin.com/in/ross-morran-2525155b" target="_blank">here</a>,
+        You can also view my LinkedIn profile <a href="https://www.linkedin.com/in/ross-morran-2525155b" target="_blank">here</a>,
         and my GitHub profile <a href="https://github.com/Ross117" target="_blank">here</a>.
       </p>
     </div>
 
-    <div class=""></div>
-
-    <div class="col-sm-10 mx-auto" id="contactMe">
-      <h2 class="text-center subHeading">Contact Me</h2>
-      <p class="text-center">I'm always happy to hear from recruiters or potential collaborators. You can contact me by e-mail:</p>
-      <p class="text-center email"><i class="fas fa-envelope-square"></i>RossMorran@hotmail.co.uk</p>
+    <div id="contactMe">
+      <h2>Contact Me</h2>
+      <p>I'm always happy to hear from recruiters or potential collaborators. You can contact me by e-mail:</p>
+      <p><i class="fas fa-envelope-square"></i>RossMorran@hotmail.co.uk</p>
     </div>
 
     <br><br>
@@ -208,10 +205,17 @@
           </div>
         </div>
         <div class="">
+          <a href="https://ross117.github.io/noughts&crosses/" target="_blank">
+            <img class="" src="noughts&crosses\screenshot.PNG" alt="Noughts & Crosses">
+          </a>
           <div class="">
             <h2 class="">
-              More projects coming soon!
+              <a href="https://ross117.github.io/noughts&crosses/" target="_blank">Noughts & Crosses</a>
             </h2>
+            <p class="">
+              A noughts and crosses game. Choose which identifier you want to play as,
+              then click the play button. Be warned, the computer is a tough opponent!
+            </p>
           </div>
         </div>
       </div>
