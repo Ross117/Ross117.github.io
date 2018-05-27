@@ -24,6 +24,15 @@ header, nav, section {
   margin: 5px 10px;
   list-style-type: none;
   font-weight: bold;
+  font-size: 100%;
+}
+
+@media (max-width: 350px) {
+  .navBar ol {
+    padding: 0px;
+    margin: 0px;
+    font-size: 85%;
+  }
 }
 
 .container {
@@ -49,7 +58,7 @@ h1, h2, h3, p {
   width: 100%;
   /* media query to hanbdle desktop viewports? */
   max-width: 960px;
-  margin: 50px auto;
+  margin: 20px auto;
 }
 
 .subSect > h2 {
@@ -62,8 +71,20 @@ h1, h2, h3, p {
   width: inherit;
   max-width: 300px;
   margin: 10px;
-  border: 1px solid #B8C1C8;
   overflow-y: auto;
+  border: 1px solid #B8C1C8;
+  border-radius: 10px;
+}
+
+/* @media (max-width: 840px) {
+  .project {
+    float: none;
+    margin: 10px auto;
+  }
+} */
+
+.projectHeader:hover {
+  border: 3px solid #B8C1C8;
 }
 
 .projectImg {
@@ -71,14 +92,10 @@ h1, h2, h3, p {
   height: 200px;
 }
 
-.project:hover {
-  border: 3px solid #B8C1C8;
+.projectDesc {
+  border-top: 1px solid #B8C1C8;
 }
 
 .projectDesc p {
   padding: 10px;
-}
-
-.projectHeader {
-  border-bottom: 2px solid #B8C1C8;
 }
