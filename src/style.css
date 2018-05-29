@@ -56,9 +56,20 @@ h1, h2, h3, p {
 
 .subSect {
   width: 100%;
-  /* media query to hanbdle desktop viewports? */
   max-width: 960px;
   margin: 20px auto;
+}
+
+@media (max-width: 1215px) {
+  .subSect {
+    max-width: 640px;
+  }
+}
+
+@media (max-width: 815px) {
+  .subSect {
+    max-width: 320px;
+  }
 }
 
 .subSect > h2 {
@@ -67,21 +78,13 @@ h1, h2, h3, p {
 
 .project {
   float: left;
-  height: 400px;
   width: inherit;
   max-width: 300px;
   margin: 10px;
-  overflow-y: auto;
   border: 1px solid #B8C1C8;
   border-radius: 10px;
+  overflow-y: auto;
 }
-
-/* @media (max-width: 840px) {
-  .project {
-    float: none;
-    margin: 10px auto;
-  }
-} */
 
 .projectHeader:hover {
   border: 3px solid #B8C1C8;
@@ -94,6 +97,8 @@ h1, h2, h3, p {
 
 .projectDesc {
   border-top: 1px solid #B8C1C8;
+  height: 200px;
+  overflow-y: auto;
 }
 
 .projectDesc p {
