@@ -16,12 +16,12 @@ $(".newQuote").on("click", function () {
       $quoteInput.html(quote);
       $citationInput.html(author);
 
-      var tweet = getTweet();
+      var tweet = $quoteInput.text().trim() + $citationInput.text().trim();
       var $twtBtn = $(".tweetQuote");
 
-      // if quote + citation length is 140 chrs or less,
+      // if quote + citation length is 280 chrs or less,
       // enable the tweet quote button
-      if (tweet.length <= 140) {
+      if (tweet.length + 3 <= 280) {
         $twtBtn.prop("disabled", false);
       } else {
         $twtBtn.prop("disabled", true);
