@@ -1,3 +1,0 @@
-A Pen created at CodePen.io. You can find this one at https://codepen.io/Ross_87/pen/weYZXx.
-
- A web app which allows the user to search Wikipedia for a topic. The first 10 search results are presented, including links to the respective Wikipedia pages and short summaries of the page contents. The user also has the option of opening a random Wikipedia page. Uses the MediaWiki API. A Free Code Camp project.

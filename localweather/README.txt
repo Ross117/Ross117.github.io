@@ -1,3 +1,0 @@
-A Pen created at CodePen.io. You can find this one at https://codepen.io/Ross_87/pen/dRNeJL.
-
- A web app which tells the user what the weather is currently like in their local area, and what the temperature is. Includes an icon representing the current weather condition, and an option to switch the temperature between Farenheit and Celcius. Also gives user location, and the current date and time. Uses the Dark Sky and Google Maps APIs. A Free Code Camp project. 
