@@ -1,0 +1,119 @@
+const { Component } = React;
+
+// parent Component
+class App extends Component {
+  constructor (props) {
+    super(props);
+
+    this.state = {
+      data: [],
+      last30DaysBtnDisabled: true,
+      allTimeBtnDisabled: false
+    };
+
+    // function call to set initial state
+    this.getLast30Days();
+  }
+
+  // ajax call function
+  getLast30Days () {
+    fetch('https://fcctop100.herokuapp.com/api/fccusers/top/recent')
+      .then( (response) => {
+        return response.json();
+      })
+      .then( (data) => {
+        this.setState( {data} );
+      })
+      .catch( () => {
+        this.setState({ data: [] });
+      });
+    this.setState({
+      last30DaysBtnDisabled: true,
+      allTimeBtnDisabled: false
+    });
+ }
+
+  // ajax call function
+  getAllTime () {
+    fetch('https://fcctop100.herokuapp.com/api/fccusers/top/alltime')
+      .then( (response) => {
+        return response.json();
+      }).then( (data) => {
+        this.setState({ data });
+      })
+      .catch( () => {
+        this.setState({ data: [] });
+      });
+    this.setState({
+      allTimeBtnDisabled: true,
+      last30DaysBtnDisabled: false
+    });
+  }
+
+  render() {
+    // render Leaderboard
+    return (
+      <div className="container">
+        <h1>Free Code Camp Leaderboard</h1>
+        <button type="button" className="btn btn-primary last30Days"
+          disabled={this.state.last30DaysBtnDisabled}
+          onClick={() => this.getLast30Days()}>Top 100 Last 30 Days</button>
+        <button type="button" className="btn btn-primary allTime"
+          disabled={this.state.allTimeBtnDisabled}
+          onClick={() => this.getAllTime()}>Top 100 All Time</button>
+        <Leaderboard data={this.state.data} />
+      </div>
+    )
+  }
+}
+
+ // child Component of App
+const Leaderboard = (props) => {
+
+  const tableRecords = props.data.map( (record, index) => {
+    // create an array of TableRecord components from the JSON data
+    return <TableRecord
+      rank={index + 1}
+      key={record.username}
+      username={record.username}
+      imageURL={record.img}
+      recent={record.recent}
+      allTime={record.alltime} />
+  });
+
+  // create the Leaderboard out of the array of TableRecord components
+  return (
+    <div className="leaderboard">
+      <table className="table table-striped table-bordered table-hover table-sm">
+        <thead className="thead-inverse">
+          <tr>
+            <th>Rank</th>
+            <th>Username</th>
+            <th>Avatar</th>
+            <th>Points from Last 30 Days</th>
+            <th>All Time Points</th>
+          </tr>
+        </thead>
+        <tbody>
+          {tableRecords}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+// child component of leaderboard
+const TableRecord = (props) => {
+
+  return (
+    <tr>
+      <td>{props.rank}</td>
+      <td>{props.username}</td>
+      <td><img src={props.imageURL}/></td>
+      <td>{props.recent}</td>
+      <td>{props.allTime}</td>
+    </tr>
+  );
+};
+
+ReactDOM.render(<App />, document.querySelector('.app'));

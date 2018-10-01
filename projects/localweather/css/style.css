@@ -1,0 +1,14 @@
+body {
+  background-color: #e74c3c;
+  font-family: 'Montaga', Verdana, sans-serif;
+  color: #FFF;
+}
+
+.getWeatherInfo {
+  margin: 10px;
+}
+
+.tempSwitch {
+  margin: 10px;
+}
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Pomodoro Clock</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pomodoro Clock</title>
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <audio class="js-timer" src="https://www.soundjay.com/clock/sounds/alarm-clock-01.mp3" autostart="false"></audio>
+
+  <div class="container">
+
+    <h1>Pomodoro Clock</h1>
+
+    <div class="form-container">
+      <form>
+        <div class="prompt">
+          <label>Work:<input type="text" class="workTime" value="00:25:00" /></label>
+        </div>
+        <div class="prompt">
+          <label>Break:<input type="text" class="breakTime" value="00:05:00" /></label>
+        </div>
+      </form>
+    </div>
+
+    <p class="err-msg js-err-msg"></p>
+
+    <p class="indicator js-indicator">Work Time</p>
+
+    <div class="clock-container">
+      <input type="text" class="clock js-clock" value="00:25:00" readonly />
+    </div>
+
+    <div class="btn-container">
+      <button type="button" class="js-start-clock">Start Clock</button>
+      <button type="button" class="js-pause-clock">Pause Clock</button>
+    </div>
+
+  </div>
+  
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
