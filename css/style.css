@@ -10,24 +10,22 @@ header, nav, section {
 
 .navBar {
   position: fixed;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   width: 100%;
   background-color: #B8C1C8; }
-
-.navBar ol {
-  padding: 0px; }
-
-.navBar li {
-  float: left;
-  margin: 5px 10px;
-  list-style-type: none;
-  font-weight: bold;
-  font-size: 100%; }
+  .navBar ol {
+    padding: 0; }
+  .navBar li {
+    float: left;
+    margin: 5px 10px;
+    list-style-type: none;
+    font-weight: bold;
+    font-size: 100%; }
 
 @media (max-width: 350px) {
   .navBar ol {
-    margin-top: 0px;
+    margin-top: 0;
     font-size: 85%; } }
 
 .container {
@@ -39,7 +37,7 @@ header, nav, section {
   width: 150px;
   margin: auto; }
 
-.myPhoto {
+.heading__myPhoto {
   width: 150px; }
 
 h1, h2, h3 {
@@ -49,6 +47,8 @@ h1, h2, h3 {
   width: 100%;
   max-width: 960px;
   margin: 20px auto; }
+  .subSect > h2 {
+    padding-top: 50px; }
 
 @media (max-width: 1215px) {
   #portfolioContainer {
@@ -58,9 +58,6 @@ h1, h2, h3 {
   #portfolioContainer {
     max-width: 320px; } }
 
-.subSect > h2 {
-  padding-top: 50px; }
-
 .project {
   float: left;
   width: inherit;
@@ -68,20 +65,18 @@ h1, h2, h3 {
   margin: 10px;
   border: 1px solid #B8C1C8; }
 
-.projectHeader {
+.project__header {
   height: 206px; }
+  .project__header:hover {
+    border: 3px solid #B8C1C8; }
 
-.projectHeader:hover {
-  border: 3px solid #B8C1C8; }
-
-.projectImg {
+.project__img {
   width: 100%;
   height: 200px; }
 
-.projectDesc {
+.project__desc {
   border-top: 1px solid #B8C1C8;
   height: 200px;
   overflow-y: auto; }
-
-.projectDesc p {
-  padding: 10px; }
+  .project__desc p {
+    padding: 10px; }
