@@ -1,5 +1,10 @@
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 100%; }
 
 body {
   font-family: 'Roboto', Verdana, sans-serif; }
@@ -13,17 +18,18 @@ header, nav, section {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #B8C1C8; }
+  background-color: #626f79; }
   .navBar ol {
-    padding: 0; }
+    width: 18.5rem;
+    margin: 1.25rem auto; }
   .navBar li {
     float: left;
-    margin: 5px 10px;
+    margin: 0.3rem 0.6rem;
     list-style-type: none;
     font-weight: bold;
     font-size: 100%; }
 
-@media (max-width: 350px) {
+@media (max-width: 22rem) {
   .navBar ol {
     margin-top: 0;
     font-size: 85%; } }
@@ -31,52 +37,54 @@ header, nav, section {
 .container {
   clear: both;
   width: 80%;
-  margin: 80px auto; }
+  margin: 5rem auto; }
 
 .heading {
-  width: 150px;
+  width: 9rem;
   margin: auto; }
 
 .heading__myPhoto {
-  width: 150px; }
+  width: 9rem; }
 
-h1, h2, h3 {
+h1, h3 {
   text-align: center; }
+
+h2 {
+  text-align: center;
+  padding-top: 3rem; }
 
 .subSect {
   width: 100%;
-  max-width: 960px;
-  margin: 20px auto; }
-  .subSect > h2 {
-    padding-top: 50px; }
+  max-width: 60rem;
+  margin: 1.25rem auto; }
 
-@media (max-width: 1215px) {
-  #portfolioContainer {
-    max-width: 640px; } }
+@media (max-width: 75rem) {
+  .portfolio {
+    max-width: 40rem; } }
 
-@media (max-width: 815px) {
-  #portfolioContainer {
-    max-width: 320px; } }
+@media (max-width: 50rem) {
+  .portfolio {
+    max-width: 20rem; } }
 
 .project {
   float: left;
   width: inherit;
-  max-width: 300px;
-  margin: 10px;
-  border: 1px solid #B8C1C8; }
+  max-width: 18rem;
+  margin: 0.625rem;
+  border: 0.1rem solid #626f79; }
 
 .project__header {
-  height: 206px; }
+  height: 13rem; }
   .project__header:hover {
-    border: 3px solid #B8C1C8; }
+    border: 0.2rem solid #626f79; }
 
 .project__img {
   width: 100%;
-  height: 200px; }
+  height: 12.5rem; }
 
 .project__desc {
-  border-top: 1px solid #B8C1C8;
-  height: 200px;
+  border-top: 0.2rem solid #626f79;
+  height: 12.5rem;
   overflow-y: auto; }
   .project__desc p {
-    padding: 10px; }
+    padding: 0.625rem; }

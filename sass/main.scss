@@ -1,117 +1,135 @@
-// implement BEM
-// use elements of 7-1 architecture?
-// css lint warnings
+// lint
 
-$colour-grey: #B8C1C8;
+$colour-dark-grey: rgb(98, 111, 121);
+$colour-white: #fff;
+$colour-blue: blue;
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
-  
-  body {
-    font-family: 'Roboto', Verdana, sans-serif;
-  }
-  
-  /* for non-HTML5 browsers  */
-  header, nav, section {
-    display: block;
-  }
-  
-  .navBar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: $colour-grey;
 
-    ol {
-      padding: 0;
-    }
+html {
+  font-size: 100%;
+}
+  
+body {
+  font-family: 'Roboto', Verdana, sans-serif;
+}
 
-    li {
-      float: left;
-      margin: 5px 10px;
-      list-style-type: none;
-      font-weight: bold;
-      font-size: 100%;
-    }
-  }
-  
-  @media (max-width: 350px) {
-    .navBar ol {
-      margin-top: 0;
-      font-size: 85%;
-    }
-  }
-  
-  .container {
-    clear: both;
-    width: 80%;
-    margin: 80px auto;
-  }
-  
-  .heading {
-    width: 150px;
-    margin: auto;
-  }
-  
-  .heading__myPhoto {
-    width: 150px;
-  }
-  
-  h1, h2, h3 {
-    text-align: center;
-  }
-  
-  .subSect {
-    width: 100%;
-    max-width: 960px;
-    margin: 20px auto;
+/* for non-HTML5 browsers  */
+header, nav, section {
+  display: block;
+}
 
-    > h2 {
-      padding-top: 50px;
-    }
+.navBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $colour-dark-grey;
+
+  ol {
+    width: 18.5rem;
+    margin: 1.25rem auto;
   }
-  
-  @media (max-width: 1215px) {
-    #portfolioContainer {
-      max-width: 640px;
-    }
-  }
-  
-  @media (max-width: 815px) {
-    #portfolioContainer {
-      max-width: 320px;
-    }
-  }
-  
-  .project {
+
+  li {
     float: left;
-    width: inherit;
-    max-width: 300px;
-    margin: 10px;
-    border: 1px solid $colour-grey;
+    margin: 0.3rem 0.6rem;
+    list-style-type: none;
+    font-weight: bold;
+    font-size: 100%;
   }
-  
-  .project__header {
-    height: 206px;
+}
 
-    &:hover {
-      border: 3px solid $colour-grey;
-    }
+.navBar__link {
+  &:link {
+    color: $colour-white;
   }
-  
-  .project__img {
-    width: 100%;
-    height: 200px;
-  }
-  
-  .project__desc {
-    border-top: 1px solid $colour-grey;
-    height: 200px;
-    overflow-y: auto;
 
-    p {
-      padding: 10px;
-    }
+  &:visited {
+    color: $colour-blue;
   }
+}
+
+@media (max-width: 22rem) {
+  .navBar ol {
+    margin-top: 0;
+    font-size: 85%;
+  }
+}
+
+.container {
+  clear: both;
+  width: 80%;
+  margin: 5rem auto;
+}
+
+.heading {
+  width: 9rem;
+  margin: auto;
+}
+
+.heading__myPhoto {
+  width: 9rem;
+}
+
+h1, h3 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  padding-top: 3rem;
+}
+
+.subSect {
+  width: 100%;
+  max-width: 60rem;
+  margin: 1.25rem auto;
+}
+
+@media (max-width: 75rem) {
+  .portfolio {
+    max-width: 40rem;
+  }
+}
+
+@media (max-width: 50rem) {
+  .portfolio {
+    max-width: 20rem;
+  }
+}
+
+.project {
+  float: left;
+  width: inherit;
+  max-width: 18rem;
+  margin: 0.625rem;
+  border: 0.1rem solid $colour-dark-grey;
+}
+
+.project__header {
+  height: 13rem;
+
+  &:hover {
+    border: 0.2rem solid $colour-dark-grey;
+  }
+}
+
+.project__img {
+  width: 100%;
+  height: 12.5rem;
+}
+
+.project__desc {
+  border-top: 0.2rem solid $colour-dark-grey;
+  height: 12.5rem;
+  overflow-y: auto;
+
+  p {
+    padding: 0.625rem;
+  }
+}
