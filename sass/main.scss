@@ -1,8 +1,8 @@
 // lint
 
-$colour-dark-grey: rgb(98, 111, 121);
-$colour-white: #fff;
-$colour-blue: blue;
+$colour-dark-grey: rgb(52, 58, 64);
+$colour-cream: rgb(242, 242, 242);
+$colour-blue: rgb(114, 154, 230);
 
 * {
     box-sizing: border-box;
@@ -23,6 +23,7 @@ header, nav, section {
   display: block;
 }
 
+// make sure nav bar is responsive
 .navBar {
   position: fixed;
   top: 0;
@@ -30,26 +31,42 @@ header, nav, section {
   width: 100%;
   background-color: $colour-dark-grey;
 
-  ol {
-    width: 18.5rem;
-    margin: 1.25rem auto;
+  @mixin navListItems {
+    list-style-type: none;
+    font-size: 100%;
+    margin: 0.3rem 0.6rem;
   }
 
-  li {
-    float: left;
-    margin: 0.3rem 0.6rem;
-    list-style-type: none;
-    font-weight: bold;
-    font-size: 100%;
+  .navBar__pageSections {
+    max-width: 20rem;
+    margin: 1.25rem auto;
+
+    li {
+      float: left;
+      @include navListItems;
+    }
+  }
+
+  .navBar__socialmedia {
+    margin-right: 8rem;
+
+    li {
+      float: right;
+      @include navListItems;
+    }
   }
 }
 
-.navBar__link {
+.navBar__link, .navBar__link--icon {
   &:link {
-    color: $colour-white;
+    color: $colour-cream;
   }
 
   &:visited {
+    color: $colour-cream;
+  }
+
+  &:hover {
     color: $colour-blue;
   }
 }

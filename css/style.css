@@ -18,16 +18,31 @@ header, nav, section {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #626f79; }
-  .navBar ol {
-    width: 18.5rem;
+  background-color: #343a40; }
+  .navBar .navBar__pageSections {
+    max-width: 20rem;
     margin: 1.25rem auto; }
-  .navBar li {
-    float: left;
-    margin: 0.3rem 0.6rem;
-    list-style-type: none;
-    font-weight: bold;
-    font-size: 100%; }
+    .navBar .navBar__pageSections li {
+      float: left;
+      list-style-type: none;
+      font-size: 100%;
+      margin: 0.3rem 0.6rem; }
+  .navBar .navBar__socialmedia {
+    margin-right: 8rem; }
+    .navBar .navBar__socialmedia li {
+      float: right;
+      list-style-type: none;
+      font-size: 100%;
+      margin: 0.3rem 0.6rem; }
+
+.navBar__link:link, .navBar__link--icon:link {
+  color: #f2f2f2; }
+
+.navBar__link:visited, .navBar__link--icon:visited {
+  color: #f2f2f2; }
+
+.navBar__link:hover, .navBar__link--icon:hover {
+  color: #729ae6; }
 
 @media (max-width: 22rem) {
   .navBar ol {
@@ -71,19 +86,19 @@ h2 {
   width: inherit;
   max-width: 18rem;
   margin: 0.625rem;
-  border: 0.1rem solid #626f79; }
+  border: 0.1rem solid #343a40; }
 
 .project__header {
   height: 13rem; }
   .project__header:hover {
-    border: 0.2rem solid #626f79; }
+    border: 0.2rem solid #343a40; }
 
 .project__img {
   width: 100%;
   height: 12.5rem; }
 
 .project__desc {
-  border-top: 0.2rem solid #626f79;
+  border-top: 0.2rem solid #343a40;
   height: 12.5rem;
   overflow-y: auto; }
   .project__desc p {
