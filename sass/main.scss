@@ -33,13 +33,13 @@ header, nav, section {
 
   @mixin navListItems {
     list-style-type: none;
-    font-size: 100%;
-    margin: 0.3rem 0.6rem;
+    margin: 1rem 0.6rem;
+    font-size: 110%;
   }
 
   .navBar__pageSections {
-    max-width: 20rem;
-    margin: 1.25rem auto;
+    width: 20rem;
+    margin: auto;
 
     li {
       float: left;
