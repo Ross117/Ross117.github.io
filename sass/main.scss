@@ -33,12 +33,13 @@ header, nav, section {
 
   @mixin navListItems {
     list-style-type: none;
-    margin: 1rem 0.6rem;
+    margin: 0.75rem 0.6rem;
     font-size: 110%;
   }
 
   .navBar__pageSections {
-    width: 20rem;
+    width: 100%;
+    max-width: 38rem;
     margin: auto;
 
     li {
@@ -71,17 +72,15 @@ header, nav, section {
   }
 }
 
-@media (max-width: 22rem) {
-  .navBar ol {
-    margin-top: 0;
-    font-size: 85%;
-  }
-}
-
 .container {
   clear: both;
   width: 80%;
   margin: 5rem auto;
+}
+
+p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .heading {
@@ -91,6 +90,7 @@ header, nav, section {
 
 .heading__myPhoto {
   width: 9rem;
+  border: 0.25rem solid $colour-dark-grey;
 }
 
 h1, h3 {
