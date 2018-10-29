@@ -1,13 +1,17 @@
-* {
-  box-sizing: border-box;
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
   margin: 0;
   padding: 0; }
 
 html {
-  font-size: 100%; }
+  font-size: 62.5%; }
 
 body {
-  font-family: 'Roboto', Verdana, sans-serif; }
+  box-sizing: border-box;
+  font-family: 'Roboto', Verdana, sans-serif;
+  color: #343a40; }
 
 /* for non-HTML5 browsers  */
 header, nav, section {
@@ -18,23 +22,23 @@ header, nav, section {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #343a40; }
+  background-color: #343a40;
+  font-size: 1.6rem; }
   .navBar .navBar__pageSections {
     width: 100%;
-    max-width: 38rem;
+    max-width: 55rem;
     margin: auto; }
     .navBar .navBar__pageSections li {
       float: left;
       list-style-type: none;
-      margin: 0.75rem 0.6rem;
-      font-size: 110%; }
+      margin: 1.2rem 1rem; }
   .navBar .navBar__socialmedia {
-    margin-right: 8rem; }
+    position: absolute;
+    right: 5rem; }
     .navBar .navBar__socialmedia li {
       float: right;
       list-style-type: none;
-      margin: 0.75rem 0.6rem;
-      font-size: 110%; }
+      margin: 1.2rem 1rem; }
 
 .navBar__link:link, .navBar__link--icon:link {
   color: #f2f2f2; }
@@ -48,59 +52,62 @@ header, nav, section {
 .container {
   clear: both;
   width: 80%;
-  margin: 5rem auto; }
+  margin: 8rem auto;
+  font-size: 1.4rem; }
 
 p {
-  margin-top: 1rem;
-  margin-bottom: 1rem; }
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem; }
 
 .heading {
-  width: 9rem;
+  width: 14rem;
   margin: auto; }
 
 .heading__myPhoto {
-  width: 9rem;
-  border: 0.25rem solid #343a40; }
+  width: 14rem;
+  border: 0.5rem solid #343a40; }
 
 h1, h3 {
-  text-align: center; }
+  text-align: center;
+  font-size: 2rem; }
 
 h2 {
   text-align: center;
-  padding-top: 3rem; }
+  padding-top: 5rem;
+  font-size: 2rem; }
 
 .subSect {
   width: 100%;
-  max-width: 60rem;
-  margin: 1.25rem auto; }
+  max-width: 96rem;
+  margin: 2rem auto; }
 
-@media (max-width: 75rem) {
+@media (max-width: 120rem) {
   .portfolio {
-    max-width: 40rem; } }
+    max-width: 64rem; } }
 
-@media (max-width: 50rem) {
+@media (max-width: 80rem) {
   .portfolio {
-    max-width: 20rem; } }
+    max-width: 32rem; } }
 
 .project {
   float: left;
   width: inherit;
-  max-width: 18rem;
-  margin: 0.625rem;
-  border: 0.1rem solid #343a40; }
+  max-width: 30rem;
+  margin: 1rem;
+  border: 0.2rem solid #343a40; }
 
 .project__header {
-  height: 13rem; }
+  height: 20rem; }
   .project__header:hover {
-    border: 0.2rem solid #343a40; }
+    border: 0.3rem solid #343a40; }
 
 .project__img {
   width: 100%;
-  height: 12.5rem; }
+  height: 20rem; }
 
 .project__desc {
-  border-top: 0.2rem solid #343a40;
-  height: 12.5rem;
+  border-top: 0.3rem solid #343a40;
+  height: 20rem;
   overflow-y: auto; }
   .project__desc p {
-    padding: 0.625rem; }
+    padding: 1rem; }
