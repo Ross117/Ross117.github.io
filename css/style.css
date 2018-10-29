@@ -39,6 +39,15 @@ header, nav, section {
       float: right;
       list-style-type: none;
       margin: 1.2rem 1rem; }
+  @media (max-width: 1000px) {
+    .navBar .navBar__pageSections {
+      margin-left: 0; }
+    .navBar .navBar__socialmedia {
+      right: 0; } }
+
+@media (max-width: 725px) {
+  .navBar {
+    display: none; } }
 
 .navBar__link:link, .navBar__link--icon:link {
   color: #f2f2f2; }

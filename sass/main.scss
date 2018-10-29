@@ -61,6 +61,22 @@ header, nav, section {
       @include navListItems;
     }
   }
+
+  @media (max-width: 1000px) {
+    .navBar__pageSections {
+      margin-left: 0;
+    }
+  
+    .navBar__socialmedia {
+      right: 0;
+    }
+  }
+}
+
+@media (max-width: 725px) {
+  .navBar {
+    display: none;
+  }
 }
 
 .navBar__link, .navBar__link--icon {
