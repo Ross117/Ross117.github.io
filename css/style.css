@@ -68,6 +68,26 @@ header, nav, section {
   .container {
     margin: 2rem auto; } }
 
+.heading {
+  width: 100%;
+  max-width: 80rem;
+  margin: auto; }
+  .heading .heading__myPhoto img {
+    width: 18rem;
+    float: left;
+    border: 0.5rem solid #343a40;
+    border-radius: 10%;
+    margin-right: 5rem; }
+  @media (max-width: 425px) {
+    .heading .heading__myPhoto {
+      width: 18rem;
+      margin: 2rem auto; }
+    .heading .heading__myPhoto img {
+      float: none; } }
+  .heading .heading__profile {
+    margin-left: 5rem;
+    font-size: 2rem; }
+
 h2 {
   text-align: center;
   padding-top: 5rem;
@@ -77,29 +97,19 @@ h3 {
   text-align: center;
   font-size: 2rem; }
 
-.heading {
-  width: 60rem;
-  margin: auto; }
-  .heading .heading__myPhoto {
-    width: 18rem;
-    border: 0.5rem solid #343a40;
-    float: left;
-    margin-right: 2rem; }
-
 p {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem; }
+  margin-top: 1.5rem; }
 
 .subSect {
   width: 100%;
   max-width: 96rem;
   margin: 2rem auto; }
 
-@media (max-width: 120rem) {
+@media (max-width: 1200px) {
   .portfolio {
     max-width: 64rem; } }
 
-@media (max-width: 80rem) {
+@media (max-width: 800px) {
   .portfolio {
     max-width: 32rem; } }
 
