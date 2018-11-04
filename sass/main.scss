@@ -27,7 +27,6 @@ header, nav, section {
   display: block;
 }
 
-// make sure nav bar is responsive
 .navBar {
   position: fixed;
   top: 0;
@@ -100,30 +99,38 @@ header, nav, section {
   font-size: 1.4rem;
 }
 
-p {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.heading {
-  width: 14rem;
-  margin: auto;
-}
-
-.heading__myPhoto {
-  width: 14rem;
-  border: 0.5rem solid $colour-grey-dark;
-}
-
-h1, h3 {
-  text-align: center;
-  font-size: 2rem;
+@media (max-width: 725px) {
+  .container {
+    margin: 2rem auto;
+  }
 }
 
 h2 {
   text-align: center;
   padding-top: 5rem;
   font-size: 2rem;
+}
+
+h3 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.heading {
+  width: 60rem;
+  margin: auto;
+
+  .heading__myPhoto {
+    width: 18rem;
+    border: 0.5rem solid $colour-grey-dark;
+    float: left;
+    margin-right: 2rem;
+  }
+}
+
+p {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .subSect {
