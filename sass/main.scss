@@ -72,6 +72,7 @@ header, nav, section {
   }
 }
 
+// use burger menu?
 @media (max-width: 725px) {
   .navBar {
     display: none;
@@ -99,16 +100,15 @@ header, nav, section {
   font-size: 1.4rem;
 }
 
-@media (max-width: 725px) {
-  .container {
-    margin: 2rem auto;
-  }
+p {
+  margin-top: 1.5rem;
 }
 
 .heading {
   width: 100%;
   max-width: 80rem;
   margin: auto;
+  padding-top: 5rem;
 
   .heading__myPhoto img {
     width: 18rem;
@@ -119,6 +119,7 @@ header, nav, section {
   }
 
   @media (max-width: 425px) {
+
     .heading__myPhoto {
       width: 18rem;
       margin: 2rem auto;
@@ -132,28 +133,35 @@ header, nav, section {
   .heading__profile {
     margin-left: 5rem;
     font-size: 2rem;
+
+    h1 {
+      font-size: 3rem;
+    }
   }
-}
-
-h2 {
-  text-align: center;
-  padding-top: 5rem;
-  font-size: 2rem;
-}
-
-h3 {
-  text-align: center;
-  font-size: 2rem;
-}
-
-p {
-  margin-top: 1.5rem;
 }
 
 .subSect {
   width: 100%;
   max-width: 96rem;
   margin: 2rem auto;
+
+  h2 {
+    text-align: center;
+    padding-top: 5rem;
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    text-align: center;
+    font-size: 2.2rem;
+  }
+}
+
+.skills__card {
+  float: left;
+  width: 100%;
+  max-width: 30rem;
+  margin: 2rem 1rem;
 }
 
 @media (max-width: 1200px) {

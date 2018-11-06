@@ -19,25 +19,30 @@
     <nav class="navBar">
       <ol class="navBar__pageSections">
         <li>
-          <a class="navBar__link" href="#aboutMe">About Me</a>
+          <a class="navBar__link" href="#aboutMeSect">About Me</a>
         </li>
         <li>
-          <a class="navBar__link" href="#skills">Skills</a>
+          <a class="navBar__link" href="#skillsSect">Skills</a>
         </li>
         <li>
-          <a class="navBar__link" href="#portfolioContainer">My Projects</a>
+          <a class="navBar__link" href="#portfolioSect">My Projects</a>
         </li>
         <li>
-          <a class="navBar__link" href="#experience">Experience</a>
+          <a class="navBar__link" href="#experienceSect">Experience</a>
         </li>
         <li>
-          <a class="navBar__link" href="#education">Education</a>
+          <a class="navBar__link" href="#educationSect">Education</a>
         </li>
         <li>
-          <a class="navBar__link" href="#contactMe">Contact Me</a>
+          <a class="navBar__link" href="#contactMeSect">Contact Me</a>
         </li>
       </ol>
       <ol class="navBar__socialmedia">
+        <li>
+          <a class="navBar__link--icon" href="https://codepen.io/Ross_87/" target="_blank">
+            <i class="fab fa-codepen"></i>
+          </a>
+        </li>
         <li>
           <a class="navBar__link--icon" href="https://github.com/Ross117" target="_blank">
             <i class="fab fa-github"></i>
@@ -46,11 +51,6 @@
         <li>
           <a class="navBar__link--icon" href="https://www.linkedin.com/in/ross-morran-2525155b" target="_blank">
             <i class="fab fa-linkedin"></i>
-          </a>
-        </li>
-        <li>
-          <a class="navBar__link--icon" href="https://codepen.io/Ross_87/" target="_blank">
-            <i class="fab fa-codepen"></i>
           </a>
         </li>
         <li>
@@ -64,8 +64,8 @@
 
   <main class="container">
 
-    <header class="heading" id="aboutMe">
-      <section>
+    <header>
+      <section class="heading" id="aboutMeSect">
         <div class="heading__myPhoto">
           <img src="img/MyPhoto.jpg" alt="My Photo">
         </div>
@@ -81,19 +81,35 @@
       </section>
     </header>
 
-    <!-- <section class="subSect" >
-      <p>
-        
-        You can also view my LinkedIn profile <a href="https://www.linkedin.com/in/ross-morran-2525155b" target="_blank">here</a>,
-        and my GitHub profile <a href="https://github.com/Ross117" target="_blank">here</a>.
-      </p>
-    </section> -->
-
-    <section class="subSect" id="skills">
+    <section class="skills subSect" id="skillsSect">
       <h2>Skills</h2>
+      <div class="skills__card">
+        <h3>Languages</h3>
+        <ul>
+          <li>JavaScript ES6</li>
+          <li>CSS3, Sass</li>
+          <li>HTML 5</li>
+          <li>Git</li>
+          <li>SQL</li>
+        </ul>
+      </div>
+      <div class="skills__card">
+        <h3>Libraries & Frameworks</h3>
+        <ul>
+          <li>React</li>
+          <li>jQuery</li>
+          <li>Bootstrap</li>
+        </ul>
+      </div>
+      <div class="skills__card">
+        <h3>Personal Skills</h3>
+        <ul></ul>
+      </div>
     </section>
 
-    <section class="subSect portfolio" id="portfolioContainer">
+    <!-- need clearfix -->
+
+    <section class="portfolio subSect" id="portfolioSect">
       <h2>My Projects</h2>
       <p>Click on the images or the links to view the projects!</p>
 
@@ -261,15 +277,15 @@
 
     </section>
 
-    <section class="subSect" id="experience">
+    <section class="subSect" id="experienceSect">
       <h2>Experience</h2>
     </section>
 
-    <section class="subSect" id="education">
+    <section class="subSect" id="educationSect">
       <h2>Education</h2>
     </section>
 
-    <section class="subSect" id="contactMe">
+    <section class="subSect" id="contactMeSect">
       <h2>Contact Me</h2>
       <p>I'm always happy to hear from recruiters or potential collaborators.</p>
       <!-- add more icons? -->
