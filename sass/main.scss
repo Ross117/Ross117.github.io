@@ -162,6 +162,11 @@ p {
   width: 100%;
   max-width: 30rem;
   margin: 2rem 1rem;
+  box-shadow: 1rem 1rem;
+}
+
+.portfolio {
+  clear: left;
 }
 
 @media (max-width: 1200px) {
@@ -205,4 +210,8 @@ p {
   p {
     padding: 1rem;
   }
+}
+
+.experience {
+  clear: left;
 }
