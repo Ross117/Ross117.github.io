@@ -67,6 +67,9 @@ header, nav, section {
 p {
   margin-top: 1.5rem; }
 
+h1 {
+  font-size: 3rem; }
+
 .heading {
   width: 100%;
   max-width: 80rem;
@@ -87,27 +90,36 @@ p {
   .heading .heading__profile {
     margin-left: 5rem;
     font-size: 2rem; }
-    .heading .heading__profile h1 {
-      font-size: 3rem; }
+
+h2 {
+  text-align: center;
+  padding-top: 5rem;
+  font-size: 2.5rem; }
+
+h3 {
+  text-align: center;
+  font-size: 2.2rem; }
 
 .subSect {
   width: 100%;
   max-width: 96rem;
   margin: 2rem auto; }
-  .subSect h2 {
-    text-align: center;
-    padding-top: 5rem;
-    font-size: 2.5rem; }
-  .subSect h3 {
-    text-align: center;
-    font-size: 2.2rem; }
 
 .skills__card {
   float: left;
   width: 100%;
   max-width: 30rem;
+  height: 18rem;
   margin: 2rem 1rem;
-  box-shadow: 1rem 1rem; }
+  box-shadow: -5px 5px 8px 0 #C1CCC6; }
+  .skills__card ul {
+    margin-top: 2rem; }
+  .skills__card li {
+    list-style-type: none;
+    text-align: center;
+    font-weight: bold;
+    margin: 1rem 1rem;
+    font-size: 1.5rem; }
 
 .portfolio {
   clear: left; }
