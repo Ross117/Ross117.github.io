@@ -106,6 +106,14 @@ h3 {
   max-width: 96rem;
   margin: 2rem auto; }
 
+@media (max-width: 1220px) {
+  .subSect {
+    max-width: 64rem; } }
+
+@media (max-width: 820px) {
+  .subSect {
+    max-width: 32rem; } }
+
 .skills__card {
   float: left;
   width: 100%;
@@ -124,14 +132,6 @@ h3 {
 
 .portfolio {
   clear: left; }
-
-@media (max-width: 1200px) {
-  .portfolio {
-    max-width: 64rem; } }
-
-@media (max-width: 800px) {
-  .portfolio {
-    max-width: 32rem; } }
 
 .project__card {
   float: left;

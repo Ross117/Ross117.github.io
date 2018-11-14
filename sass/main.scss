@@ -168,10 +168,22 @@ h3 {
   margin: 2rem auto;
 }
 
+@media (max-width: 1220px) {
+  .subSect {
+    max-width: 64rem;
+  }
+}
+
+@media (max-width: 820px) {
+  .subSect {
+    max-width: 32rem;
+  }
+}
+
+
 .skills__card {
   @include card;
   height: 18rem;
-
 
   ul {
     margin-top: 2rem;
@@ -180,7 +192,6 @@ h3 {
   li {
     list-style-type: none;
     text-align: center;
-    // font-weight: bold;
     margin: 1rem 1rem;
     font-size: 1.5rem;
   }
@@ -190,17 +201,23 @@ h3 {
   clear: left;
 }
 
-@media (max-width: 1200px) {
-  .portfolio {
-    max-width: 64rem;
-  }
-}
+// @media (max-width: 1200px) {
+//   .skills {
+//     max-width: 64rem;
+//   }
+//   .portfolio {
+//     max-width: 64rem;
+//   }
+// }
 
-@media (max-width: 800px) {
-  .portfolio {
-    max-width: 32rem;
-  }
-}
+// @media (max-width: 800px) {
+//   .skills {
+//     max-width: 32rem;
+//   }
+//   .portfolio {
+//     max-width: 32rem;
+//   }
+// }
 
 .project__card {
   @include card;
