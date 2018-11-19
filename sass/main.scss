@@ -159,7 +159,7 @@ h3 {
   margin: 2rem 1rem;
   border: 0.2rem solid $colour-cream;
   box-shadow: -5px 5px 8px 0 #C1CCC6;
-  // use sass function to calc height & colour(s)?
+  // use sass function to calc height & colour(s) - or pass arguments to mixin?
 }
 
 .subSect {
@@ -200,24 +200,6 @@ h3 {
 .portfolio {
   clear: left;
 }
-
-// @media (max-width: 1200px) {
-//   .skills {
-//     max-width: 64rem;
-//   }
-//   .portfolio {
-//     max-width: 64rem;
-//   }
-// }
-
-// @media (max-width: 800px) {
-//   .skills {
-//     max-width: 32rem;
-//   }
-//   .portfolio {
-//     max-width: 32rem;
-//   }
-// }
 
 .project__card {
   @include card;
