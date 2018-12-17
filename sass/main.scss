@@ -159,6 +159,10 @@ h3 {
   margin: 2rem 1rem;
   border: 0.2rem solid $colour-cream;
   box-shadow: -5px 5px 8px 0 #C1CCC6;
+
+  &:hover {
+    box-shadow: -0.5rem 0.5rem 0.8rem 0 $colour-grey-dark;
+  }
   // use sass function to calc height & colour(s) - or pass arguments to mixin?
 }
 
@@ -179,7 +183,6 @@ h3 {
     max-width: 32rem;
   }
 }
-
 
 .skills__card {
   @include card;
