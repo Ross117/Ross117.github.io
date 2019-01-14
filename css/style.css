@@ -77,7 +77,8 @@ h1 {
   margin: auto;
   padding-top: 5rem; }
   .heading .heading__myPhoto img {
-    width: 18rem;
+    width: 22rem;
+    height: 20rem;
     float: left;
     border: 0.5rem solid #343a40;
     border-radius: 10%;
