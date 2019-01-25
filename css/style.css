@@ -79,7 +79,7 @@ h1 {
     border: 0.5rem solid #343a40;
     border-radius: 10%;
     margin-right: 5rem; }
-  @media (max-width: 425px) {
+  @media (max-width: 1000px) {
     .heading .heading__myPhoto {
       width: 18rem;
       margin: 2rem auto; }

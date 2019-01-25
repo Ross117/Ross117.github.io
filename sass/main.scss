@@ -116,7 +116,7 @@ h1 {
     margin-right: 5rem;
   }
 
-  @media (max-width: 425px) {
+  @media (max-width: 1000px) {
 
     .heading__myPhoto {
       width: 18rem;
@@ -145,6 +145,16 @@ h3 {
   font-size: 2.2rem;
 }
 
+.subSect {
+  margin: 2rem auto;
+}
+
+.card__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 @mixin card {
   width: 100%;
   max-width: 30rem;
@@ -155,16 +165,6 @@ h3 {
   &:hover {
     box-shadow: -0.5rem 0.5rem 0.8rem 0 $colour-grey-dark;
   }
-}
-
-.subSect {
-  margin: 2rem auto;
-}
-
-.card__container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 .skills__card {
