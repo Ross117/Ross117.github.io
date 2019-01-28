@@ -96,6 +96,8 @@ h3 {
 
 .subSect {
   margin: 2rem auto; }
+  .subSect p {
+    text-align: center; }
 
 .card__container {
   display: flex;
