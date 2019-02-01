@@ -40,18 +40,26 @@ body {
       margin-left: 0; }
     .navBar .navBar__socialmedia {
       right: 0; } }
+  @media (max-width: 750px) {
+    .navBar .navBar__link, .navBar .navBar__link--mobile {
+      font-size: 1.4rem; }
+    .navBar .navBar__socialmedia {
+      display: none; } }
+  @media (max-width: 550px) {
+    .navBar .navBar__pageSections {
+      margin-left: 0; }
+      .navBar .navBar__pageSections li {
+        margin-left: 0; }
+    .navBar .navBar__link {
+      display: none; } }
 
-@media (max-width: 725px) {
-  .navBar {
-    display: none; } }
-
-.navBar__link:link, .navBar__link--icon:link {
+.navBar__link:link, .navBar__link--mobile:link, .navBar__link--icon:link {
   color: #f2f2f2; }
 
-.navBar__link:visited, .navBar__link--icon:visited {
+.navBar__link:visited, .navBar__link--mobile:visited, .navBar__link--icon:visited {
   color: #f2f2f2; }
 
-.navBar__link:hover, .navBar__link--icon:hover {
+.navBar__link:hover, .navBar__link--mobile:hover, .navBar__link--icon:hover {
   color: #729ae6; }
 
 .container {
@@ -135,3 +143,6 @@ h3 {
     border-top: 0.3rem solid #f2f2f2; }
     .project__card .project__desc p {
       padding: 1rem; }
+
+.fas {
+  padding-right: 0.5rem; }
