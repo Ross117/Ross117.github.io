@@ -107,42 +107,54 @@ h3 {
   .subSect p {
     text-align: center; }
 
-.card__container {
+.cardContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center; }
 
-.skills__card {
+.skillsCard {
   width: 100%;
   max-width: 30rem;
   margin: 2rem 1rem;
   border: 0.2rem solid #f2f2f2;
   box-shadow: -5px 5px 8px 0 #C1CCC6; }
-  .skills__card:hover {
+  .skillsCard:hover {
     box-shadow: -0.5rem 0.5rem 0.8rem 0 #343a40; }
-  .skills__card ul {
+  .skillsCard ul {
     margin-top: 2rem; }
-  .skills__card li {
+  .skillsCard li {
     list-style-type: none;
     text-align: center;
     margin: 1rem 1rem;
     font-size: 1.5rem; }
 
-.project__card {
+.projectCard {
   width: 100%;
   max-width: 30rem;
   margin: 2rem 1rem;
   border: 0.2rem solid #f2f2f2;
   box-shadow: -5px 5px 8px 0 #C1CCC6; }
-  .project__card:hover {
+  .projectCard:hover {
     box-shadow: -0.5rem 0.5rem 0.8rem 0 #343a40; }
-  .project__card .project__img {
+  .projectCard .projectCard__img {
     width: 100%;
     height: 20rem; }
-  .project__card .project__desc {
+  .projectCard .projectCard__desc {
     border-top: 0.3rem solid #f2f2f2; }
-    .project__card .project__desc p {
+    .projectCard .projectCard__desc p {
       padding: 1rem; }
 
-.fas {
-  padding-right: 0.5rem; }
+.iconContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem; }
+  .iconContainer .icon__link {
+    margin: 1.2rem 1rem;
+    font-size: 4rem;
+    text-decoration: none; }
+    .iconContainer .icon__link:link {
+      color: #343a40; }
+    .iconContainer .icon__link:visited {
+      color: #343a40; }
+    .iconContainer .icon__link:hover {
+      color: #729ae6; }

@@ -134,7 +134,6 @@ h1 {
   }
 
   @media (max-width: 1025px) {
-
     .heading__myPhoto {
       width: 24.3rem;
       margin: 2rem auto;
@@ -165,7 +164,7 @@ h3 {
   }
 }
 
-.card__container {
+.cardContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -183,7 +182,7 @@ h3 {
   }
 }
 
-.skills__card {
+.skillsCard {
   @include card;
 
   ul {
@@ -198,15 +197,15 @@ h3 {
   }
 }
 
-.project__card {
+.projectCard {
   @include card;
   
-  .project__img {
+  .projectCard__img {
     width: 100%;
     height: 20rem;
   }
   
-  .project__desc {
+  .projectCard__desc {
     border-top: 0.3rem solid $colour-cream;
   
     p {
@@ -215,6 +214,26 @@ h3 {
   }
 }
 
-.fas {
-  padding-right: 0.5rem
+.iconContainer {
+   display: flex;
+   justify-content: center;
+   margin-top: 2rem;
+
+  .icon__link {
+    margin: 1.2rem 1rem;
+    font-size: 4rem;
+    text-decoration: none;
+
+    &:link {
+      color: $colour-grey-dark;
+    }
+  
+    &:visited {
+      color: $colour-grey-dark;
+    }
+  
+    &:hover {
+      color: $colour-blue;
+    }
+  }
 }
