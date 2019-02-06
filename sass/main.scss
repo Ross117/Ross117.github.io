@@ -52,6 +52,20 @@ body {
     }
   }
 
+  .navBar__link, .navBar__link--mobile, .navBar__link--icon {
+    &:link {
+      color: $colour-cream;
+    }
+  
+    &:visited {
+      color: $colour-cream;
+    }
+  
+    &:hover {
+      color: $colour-blue;
+    }
+  }
+
   @media (max-width: 1000px) {
     .navBar__socialmedia {
       right: 0;
@@ -67,25 +81,15 @@ body {
       display: none;
     }
   }
-
-  @media (max-width: 550px) {
-    .navBar__link {
-      display: none;
-    }
-  }
 }
 
-.navBar__link, .navBar__link--mobile, .navBar__link--icon {
-  &:link {
-    color: $colour-cream;
-  }
+@media (max-width: 550px) {
+  .navBar {
+    justify-content: center;
 
-  &:visited {
-    color: $colour-cream;
-  }
-
-  &:hover {
-    color: $colour-blue;
+    .navBar__pageSections .navBar__link {
+      display: none;
+    }
   }
 }
 
@@ -105,27 +109,27 @@ h1 {
 }
 
 .heading {
-  width: 100%;
+  display: flex;
+  justify-content: center;
   max-width: 85rem;
   margin: auto;
   padding-top: 5rem;
 
   .heading__myPhoto img {
     width: 24.3rem;
-    float: left;
     border: 0.5rem solid $colour-grey-dark;
     border-radius: 10%;
     margin-right: 5rem;
   }
+}
 
-  @media (max-width: 1025px) {
+@media (max-width: 1025px) {
+  .heading {
+    flex-wrap: wrap;
+
     .heading__myPhoto {
       width: 24.3rem;
-      margin: 2rem auto;
-    }
-
-    .heading__myPhoto img {
-      float: none;
+      margin: 2rem;
     }
   }
 }
