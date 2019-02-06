@@ -51,13 +51,14 @@ body {
 @media (max-width: 550px) {
   .navBar {
     justify-content: center; }
-    .navBar .navBar__pageSections .navBar__link {
-      display: none; } }
+    .navBar .navBar__link {
+      display: none; }
+    .navBar .navBar__pageSections li {
+      margin-left: 0; } }
 
 .container {
   width: 80%;
-  margin: 8rem auto;
-  font-size: 1.4rem; }
+  margin: 8rem auto; }
 
 p {
   margin-top: 1.5rem;

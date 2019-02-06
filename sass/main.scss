@@ -87,8 +87,12 @@ body {
   .navBar {
     justify-content: center;
 
-    .navBar__pageSections .navBar__link {
+    .navBar__link {
       display: none;
+    }
+
+    .navBar__pageSections li {
+      margin-left: 0;
     }
   }
 }
@@ -96,7 +100,6 @@ body {
 .container {
   width: 80%;
   margin: 8rem auto;
-  font-size: 1.4rem;
 }
 
 p {
