@@ -21,6 +21,7 @@ body {
 }
 
 .navBar {
+  display: flex;
   position: fixed;
   top: 0;
   left: 0;
@@ -34,37 +35,30 @@ body {
   }
 
   .navBar__pageSections {
-    width: 100%;
-    max-width: 55rem;
-    margin: auto;
+    display: flex;
 
     li {
-      float: left;
       @include navListItems;
     }
   }
 
   .navBar__socialmedia {
+    display: flex;
     position: absolute;
     right: 5rem;
 
     li {
-      float: right;
       @include navListItems;
     }
   }
 
   @media (max-width: 1000px) {
-    .navBar__pageSections {
-      margin-left: 0;
-    }
-  
     .navBar__socialmedia {
       right: 0;
     }
   }
 
-  @media (max-width: 750px) {
+  @media (max-width: 800px) {
     .navBar__link, .navBar__link--mobile {
       font-size: 1.4rem;
     }
@@ -75,14 +69,6 @@ body {
   }
 
   @media (max-width: 550px) {
-    .navBar__pageSections {
-      margin-left: 0;
-
-      li {
-        margin-left: 0;
-      }
-    }
-
     .navBar__link {
       display: none;
     }
@@ -104,7 +90,6 @@ body {
 }
 
 .container {
-  clear: both;
   width: 80%;
   margin: 8rem auto;
   font-size: 1.4rem;
@@ -212,6 +197,10 @@ h3 {
       padding: 1rem;
     }
   }
+}
+
+.experienceCard {
+  @include card;
 }
 
 .iconContainer {

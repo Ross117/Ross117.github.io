@@ -14,6 +14,7 @@ body {
   color: #343a40; }
 
 .navBar {
+  display: flex;
   position: fixed;
   top: 0;
   left: 0;
@@ -21,35 +22,26 @@ body {
   background-color: #343a40;
   font-size: 1.6rem; }
   .navBar .navBar__pageSections {
-    width: 100%;
-    max-width: 55rem;
-    margin: auto; }
+    display: flex; }
     .navBar .navBar__pageSections li {
-      float: left;
       list-style-type: none;
       margin: 1.2rem 1rem; }
   .navBar .navBar__socialmedia {
+    display: flex;
     position: absolute;
     right: 5rem; }
     .navBar .navBar__socialmedia li {
-      float: right;
       list-style-type: none;
       margin: 1.2rem 1rem; }
   @media (max-width: 1000px) {
-    .navBar .navBar__pageSections {
-      margin-left: 0; }
     .navBar .navBar__socialmedia {
       right: 0; } }
-  @media (max-width: 750px) {
+  @media (max-width: 800px) {
     .navBar .navBar__link, .navBar .navBar__link--mobile {
       font-size: 1.4rem; }
     .navBar .navBar__socialmedia {
       display: none; } }
   @media (max-width: 550px) {
-    .navBar .navBar__pageSections {
-      margin-left: 0; }
-      .navBar .navBar__pageSections li {
-        margin-left: 0; }
     .navBar .navBar__link {
       display: none; } }
 
@@ -63,7 +55,6 @@ body {
   color: #729ae6; }
 
 .container {
-  clear: both;
   width: 80%;
   margin: 8rem auto;
   font-size: 1.4rem; }
@@ -143,6 +134,15 @@ h3 {
     border-top: 0.3rem solid #f2f2f2; }
     .projectCard .projectCard__desc p {
       padding: 1rem; }
+
+.experienceCard {
+  width: 100%;
+  max-width: 30rem;
+  margin: 2rem 1rem;
+  border: 0.2rem solid #f2f2f2;
+  box-shadow: -5px 5px 8px 0 #C1CCC6; }
+  .experienceCard:hover {
+    box-shadow: -0.5rem 0.5rem 0.8rem 0 #343a40; }
 
 .iconContainer {
   display: flex;
