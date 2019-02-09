@@ -146,6 +146,13 @@ h2 {
 h3 {
   text-align: center;
   font-size: 2.2rem;
+  padding: 1rem;
+}
+
+h4 {
+  text-align: center;
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
 }
 
 .subSect {
@@ -207,6 +214,14 @@ h3 {
 }
 
 .experienceCard {
+  @include card;
+
+  .experienceCard__dates {
+    font-style: italic;
+  }
+}
+
+.educationCard {
   @include card;
 }
 
