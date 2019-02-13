@@ -22,6 +22,7 @@ body {
 
 .navBar {
   display: flex;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
@@ -36,6 +37,7 @@ body {
 
   .navBar__pageSections {
     display: flex;
+    margin-left: 2rem;
 
     li {
       @include navListItems;
@@ -44,8 +46,7 @@ body {
 
   .navBar__socialmedia {
     display: flex;
-    position: absolute;
-    right: 5rem;
+    margin-right: 2rem;
 
     li {
       @include navListItems;
@@ -67,8 +68,12 @@ body {
   }
 
   @media (max-width: 1000px) {
+    .navBar__pageSections {
+      margin-left: 0;
+    }
+
     .navBar__socialmedia {
-      right: 0;
+      margin-right: 0;
     }
   }
 
@@ -85,14 +90,14 @@ body {
 
 @media (max-width: 550px) {
   .navBar {
-    justify-content: center;
+    position: static;
 
-    .navBar__link {
-      display: none;
-    }
+    .navBar__pageSections {
+      flex-direction: column;
 
-    .navBar__pageSections li {
-      margin-left: 0;
+      li {
+        margin: 0.5rem;
+      }
     }
   }
 }
@@ -100,6 +105,12 @@ body {
 .container {
   width: 80%;
   margin: 8rem auto;
+}
+
+@media (max-width: 550px) {
+  .container {
+    margin-top: 0.5rem;
+  }
 }
 
 p {
@@ -223,6 +234,10 @@ h4 {
 
 .educationCard {
   @include card;
+
+  .educationCard__dates {
+    font-style: italic;
+  }
 }
 
 .iconContainer {
@@ -238,6 +253,8 @@ h4 {
     &:link {
       color: $colour-grey-dark;
     }
+
+    // use Sass darken/lighten functions?
   
     &:visited {
       color: $colour-grey-dark;

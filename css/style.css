@@ -15,6 +15,7 @@ body {
 
 .navBar {
   display: flex;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
@@ -22,14 +23,14 @@ body {
   background-color: #343a40;
   font-size: 1.6rem; }
   .navBar .navBar__pageSections {
-    display: flex; }
+    display: flex;
+    margin-left: 2rem; }
     .navBar .navBar__pageSections li {
       list-style-type: none;
       margin: 1.2rem 1rem; }
   .navBar .navBar__socialmedia {
     display: flex;
-    position: absolute;
-    right: 5rem; }
+    margin-right: 2rem; }
     .navBar .navBar__socialmedia li {
       list-style-type: none;
       margin: 1.2rem 1rem; }
@@ -40,8 +41,10 @@ body {
   .navBar .navBar__link:hover, .navBar .navBar__link--mobile:hover, .navBar .navBar__link--icon:hover {
     color: #729ae6; }
   @media (max-width: 1000px) {
+    .navBar .navBar__pageSections {
+      margin-left: 0; }
     .navBar .navBar__socialmedia {
-      right: 0; } }
+      margin-right: 0; } }
   @media (max-width: 800px) {
     .navBar .navBar__link, .navBar .navBar__link--mobile {
       font-size: 1.4rem; }
@@ -50,15 +53,19 @@ body {
 
 @media (max-width: 550px) {
   .navBar {
-    justify-content: center; }
-    .navBar .navBar__link {
-      display: none; }
-    .navBar .navBar__pageSections li {
-      margin-left: 0; } }
+    position: static; }
+    .navBar .navBar__pageSections {
+      flex-direction: column; }
+      .navBar .navBar__pageSections li {
+        margin: 0.5rem; } }
 
 .container {
   width: 80%;
   margin: 8rem auto; }
+
+@media (max-width: 550px) {
+  .container {
+    margin-top: 0.5rem; } }
 
 p {
   margin-top: 1.5rem;
@@ -162,6 +169,8 @@ h4 {
   box-shadow: -5px 5px 8px 0 #C1CCC6; }
   .educationCard:hover {
     box-shadow: -0.5rem 0.5rem 0.8rem 0 #343a40; }
+  .educationCard .educationCard__dates {
+    font-style: italic; }
 
 .iconContainer {
   display: flex;
