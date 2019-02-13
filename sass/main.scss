@@ -1,3 +1,7 @@
+$section-heading-font-size: 3rem;
+$card-heading-font-size: 2.2rem;
+$card-subHeading-font-size: 1.5rem;
+$para-font-size: 2rem;
 $colour-grey-dark: rgb(52, 58, 64);
 $colour-cream: rgb(242, 242, 242);
 $colour-blue: rgb(114, 154, 230);
@@ -53,7 +57,7 @@ body {
     }
   }
 
-  .navBar__link, .navBar__link--mobile, .navBar__link--icon {
+  .navBar__link, .navBar__link--icon {
     &:link {
       color: $colour-cream;
     }
@@ -78,7 +82,7 @@ body {
   }
 
   @media (max-width: 800px) {
-    .navBar__link, .navBar__link--mobile {
+    .navBar__link {
       font-size: 1.4rem;
     }
   
@@ -115,11 +119,11 @@ body {
 
 p {
   margin-top: 1.5rem;
-  font-size: 2rem;
+  font-size: $para-font-size;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: $section-heading-font-size;
 }
 
 .heading {
@@ -151,18 +155,18 @@ h1 {
 h2 {
   text-align: center;
   padding-top: 5rem;
-  font-size: 3rem;
+  font-size: $section-heading-font-size;
 }
 
 h3 {
   text-align: center;
-  font-size: 2.2rem;
+  font-size: $card-heading-font-size;
   padding: 1rem;
 }
 
 h4 {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: $card-subHeading-font-size;
   padding-bottom: 1rem;
 }
 
@@ -174,10 +178,24 @@ h4 {
   }
 }
 
+@keyframes moveInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
 .cardContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  animation-name: moveInTop;
+  animation-duration: 2s;
 }
 
 @mixin card {
@@ -203,7 +221,7 @@ h4 {
     list-style-type: none;
     text-align: center;
     margin: 1rem 1rem;
-    font-size: 1.5rem;
+    font-size: $card-subHeading-font-size;
   }
 }
 
@@ -253,8 +271,6 @@ h4 {
     &:link {
       color: $colour-grey-dark;
     }
-
-    // use Sass darken/lighten functions?
   
     &:visited {
       color: $colour-grey-dark;
