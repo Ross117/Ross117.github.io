@@ -21,7 +21,8 @@ body {
   left: 0;
   width: 100%;
   background-color: #343a40;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  z-index: 1; }
   .navBar .navBar__pageSections {
     display: flex;
     margin-left: 2rem; }
@@ -149,7 +150,8 @@ h4 {
   max-width: 30rem;
   margin: 2rem 1rem;
   border: 0.2rem solid #f2f2f2;
-  box-shadow: -5px 5px 8px 0 #C1CCC6; }
+  box-shadow: -5px 5px 8px 0 #C1CCC6;
+  position: relative; }
   .projectCard:hover {
     box-shadow: -0.5rem 0.5rem 0.8rem 0 #343a40; }
   .projectCard .projectCard__img {
@@ -158,7 +160,19 @@ h4 {
   .projectCard .projectCard__desc {
     border-top: 0.3rem solid #f2f2f2; }
     .projectCard .projectCard__desc p {
-      padding: 1rem; }
+      padding: 1rem;
+      margin-bottom: 3rem; }
+  .projectCard .projectCard__githubLink {
+    font-size: 2.5rem;
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0.5rem; }
+    .projectCard .projectCard__githubLink:link {
+      color: #343a40; }
+    .projectCard .projectCard__githubLink:visited {
+      color: #343a40; }
+    .projectCard .projectCard__githubLink:hover {
+      color: #729ae6; }
 
 .experienceCard {
   width: 100%;

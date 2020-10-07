@@ -24,6 +24,20 @@ body {
   color: $colour-grey-dark;
 }
 
+@mixin linkStateColours($colour-link, $colour-visited, $colour-hover) {
+  &:link {
+    color: $colour-link;
+  }
+
+  &:visited {
+    color: $colour-visited;
+  }
+
+  &:hover {
+    color: $colour-hover;
+  }
+}
+
 .navBar {
   display: flex;
   justify-content: space-between;
@@ -33,6 +47,7 @@ body {
   width: 100%;
   background-color: $colour-grey-dark;
   font-size: 1.6rem;
+  z-index: 1;
 
   @mixin navListItems {
     list-style-type: none;
@@ -58,17 +73,7 @@ body {
   }
 
   .navBar__link, .navBar__link--icon {
-    &:link {
-      color: $colour-cream;
-    }
-  
-    &:visited {
-      color: $colour-cream;
-    }
-  
-    &:hover {
-      color: $colour-blue;
-    }
+    @include linkStateColours($colour-cream, $colour-cream, $colour-blue);
   }
 
   @media (max-width: 1000px) {
@@ -227,6 +232,7 @@ h4 {
 
 .projectCard {
   @include card;
+  position: relative;
   
   .projectCard__img {
     width: 100%;
@@ -238,7 +244,16 @@ h4 {
   
     p {
       padding: 1rem;
+      margin-bottom: 3rem;
     }
+  }
+
+  .projectCard__githubLink {
+    font-size: 2.5rem;
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0.5rem;
+    @include linkStateColours($colour-grey-dark, $colour-grey-dark, $colour-blue);
   }
 }
 
@@ -267,17 +282,6 @@ h4 {
     margin: 1.2rem 1rem;
     font-size: 4rem;
     text-decoration: none;
-
-    &:link {
-      color: $colour-grey-dark;
-    }
-  
-    &:visited {
-      color: $colour-grey-dark;
-    }
-  
-    &:hover {
-      color: $colour-blue;
-    }
+    @include linkStateColours($colour-grey-dark, $colour-grey-dark, $colour-blue);
   }
 }
