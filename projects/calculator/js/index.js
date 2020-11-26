@@ -209,13 +209,23 @@ function attachListeners() {
   var digitBtns = document.querySelectorAll('.digitBtn');
   var operatorBtns = document.querySelectorAll('.operatorBtn');
 
-  Array.from(digitBtns).forEach(function (btn) {
-    btn.addEventListener('click', digitBtn);
-  });
+  if (!Array.from) {
+    for (var i = 0; i < digitBtns.length; i++) {
+      digitBtns[i].addEventListener("click", digitBtn);
+    }
 
-  Array.from(operatorBtns).forEach(function (btn) {
-    btn.addEventListener('click', operatorBtn);
-  });
+    for (var i = 0; i < operatorBtns.length; i++) {
+      operatorBtns[i].addEventListener("click", operatorBtn);
+    }
+  } else {
+    Array.from(digitBtns).forEach((btn) => {
+      btn.addEventListener("click", digitBtn);
+    });
+
+    Array.from(operatorBtns).forEach((btn) => {
+      btn.addEventListener("click", operatorBtn);
+    });
+  }
 
   document.querySelector('.decimalPnt').addEventListener('click', decimalPntBtn);
 

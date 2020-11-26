@@ -1,20 +1,86 @@
-'use strict';
+"use strict";
 
-var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+var _slicedToArray = (function () {
+  function sliceIterator(arr, i) {
+    var _arr = [];
+    var _n = true;
+    var _d = false;
+    var _e = undefined;
+    try {
+      for (
+        var _i = arr[Symbol.iterator](), _s;
+        !(_n = (_s = _i.next()).done);
+        _n = true
+      ) {
+        _arr.push(_s.value);
+        if (i && _arr.length === i) break;
+      }
+    } catch (err) {
+      _d = true;
+      _e = err;
+    } finally {
+      try {
+        if (!_n && _i["return"]) _i["return"]();
+      } finally {
+        if (_d) throw _e;
+      }
+    }
+    return _arr;
+  }
+  return function (arr, i) {
+    if (Array.isArray(arr)) {
+      return arr;
+    } else if (Symbol.iterator in Object(arr)) {
+      return sliceIterator(arr, i);
+    } else {
+      throw new TypeError(
+        "Invalid attempt to destructure non-iterable instance"
+      );
+    }
+  };
+})();
 
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+function _toConsumableArray(arr) {
+  if (Array.isArray(arr)) {
+    for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) {
+      arr2[i] = arr[i];
+    }
+    return arr2;
+  } else {
+    return Array.from(arr);
+  }
+}
 
-var game = function setupGame() {
+var game = (function setupGame() {
   var state = {
     options: [],
-    identifers: { computer: '', user: '' },
-    moves: { computer: [], user: [] }
+    identifers: { computer: "", user: "" },
+    moves: { computer: [], user: [] },
   };
 
-  var winningCombos = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [1, 5, 9], [3, 5, 7], [1, 4, 7], [2, 5, 8], [3, 6, 9]];
+  var winningCombos = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+    [1, 5, 9],
+    [3, 5, 7],
+    [1, 4, 7],
+    [2, 5, 8],
+    [3, 6, 9],
+  ];
 
-  var $sqrs = Array.from(document.querySelectorAll('.sqr'));
-  var $msg = document.querySelector('.msg');
+  var $sqrs = [];
+
+  if (!Array.from) {
+    var nodeList = document.querySelectorAll(".sqr");
+    for (var i = 0; i < nodeList.length; i++) {
+      $sqrs.push(nodeList[i]);
+    }
+  } else {
+    $sqrs = Array.from(document.querySelectorAll(".sqr"));
+  }
+
+  var $msg = document.querySelector(".msg");
 
   var checkforWinner = function checkforWinner(player, playerArr) {
     var winningCombo = false;
@@ -23,16 +89,21 @@ var game = function setupGame() {
     if (playerArr.length < 3) return false;
 
     do {
-      if (playerArr.indexOf(winningCombos[i - 1][0]) !== -1 && playerArr.indexOf(winningCombos[i - 1][1]) !== -1 && playerArr.indexOf(winningCombos[i - 1][2]) !== -1) {
+      if (
+        playerArr.indexOf(winningCombos[i - 1][0]) !== -1 &&
+        playerArr.indexOf(winningCombos[i - 1][1]) !== -1 &&
+        playerArr.indexOf(winningCombos[i - 1][2]) !== -1
+      ) {
         winningCombo = true;
       } else i += 1;
     } while (!winningCombo && i <= winningCombos.length);
 
     if (winningCombo) {
-      if (player === 'computer') $msg.innerText = 'The computer has won';else $msg.innerText = 'Congratulations, you\'ve won!';
+      if (player === "computer") $msg.innerText = "The computer has won";
+      else $msg.innerText = "Congratulations, you've won!";
       $sqrs.forEach(function (val) {
         var sqr = val;
-        sqr.removeEventListener('click', userPlay);
+        sqr.removeEventListener("click", userPlay);
       });
     }
 
@@ -62,8 +133,6 @@ var game = function setupGame() {
             return state.options.indexOf(val) !== -1;
           });
           if (availableMvs.length === 1) {
-            ;
-
             var _availableMvs = _slicedToArray(availableMvs, 1);
 
             nxtMv = _availableMvs[0];
@@ -155,50 +224,56 @@ var game = function setupGame() {
     } else if (pickRegularMv(state.moves.user) !== null) {
       computerSelection = pickRegularMv(state.moves.user);
       // 7. else choose a random option
-    } else computerSelection = state.options[getRandomInt(state.options.length)];
+    } else
+      computerSelection = state.options[getRandomInt(state.options.length)];
 
     // 8. update board
-    document.querySelector('[id=\'' + computerSelection + '\']').innerText = state.identifers.computer;
+    document.querySelector("[id='" + computerSelection + "']").innerText =
+      state.identifers.computer;
     // 9. update computerPlays array
     state.moves.computer.push(computerSelection);
     // 10. Check if computer has won
-    if (checkforWinner('computer', state.moves.computer)) return;
+    if (checkforWinner("computer", state.moves.computer)) return;
     // 11. remove selection from options array
     var ind = state.options.indexOf(computerSelection);
     state.options.splice(ind, 1);
     // 12. check if the game's over
-    if (state.options.length === 0) $msg.innerText = 'Match drawn';else $msg.innerText = 'Your turn';
+    if (state.options.length === 0) $msg.innerText = "Match drawn";
+    else $msg.innerText = "Your turn";
   };
 
   var userPlay = function userPlay(event) {
     var $targetDiv = event.target;
 
     // 1. update board
-    if ($targetDiv.innerText === '') $targetDiv.innerText = state.identifers.user;else return;
+    if ($targetDiv.innerText === "")
+      $targetDiv.innerText = state.identifers.user;
+    else return;
 
     var numericVal = parseInt($targetDiv.id, 10);
     // 2. update userPlays array
     state.moves.user.push(numericVal);
     // 3. check if user has won
-    if (checkforWinner('user', state.moves.user)) return;
+    if (checkforWinner("user", state.moves.user)) return;
     // 4. remove selection from options array
     var ind = state.options.indexOf(numericVal);
     state.options.splice(ind, 1);
     // 5. check if the game is drawn. If not, make the computer play.
-    if (state.options.length === 0) $msg.innerText = 'Match drawn';else {
-      $msg.innerText = '';
+    if (state.options.length === 0) $msg.innerText = "Match drawn";
+    else {
+      $msg.innerText = "";
       computerPlay();
     }
   };
 
   var startGame = function startGame() {
     var resetGame = function resetGame() {
-      $msg.innerText = '';
+      $msg.innerText = "";
 
       $sqrs.forEach(function (sqr) {
         var $sqr = sqr;
-        $sqr.innerText = '';
-        $sqr.addEventListener('click', userPlay);
+        $sqr.innerText = "";
+        $sqr.addEventListener("click", userPlay);
       });
 
       state.options = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -207,14 +282,17 @@ var game = function setupGame() {
     };
 
     var selectIdentifier = function selectIdentifier() {
-      state.identifers.user = document.querySelector('.select-identifier').value;
-      state.identifers.computer = state.identifers.user === 'O' ? 'X' : 'O';
+      state.identifers.user = document.querySelector(
+        ".select-identifier"
+      ).value;
+      state.identifers.computer = state.identifers.user === "O" ? "X" : "O";
     };
 
     var determineStarter = function determineStarter() {
       var randomNum = Math.round(Math.random());
 
-      if (randomNum === 1) computerPlay();else $msg.innerText = 'Your turn';
+      if (randomNum === 1) computerPlay();
+      else $msg.innerText = "Your turn";
     };
 
     resetGame();
@@ -225,8 +303,8 @@ var game = function setupGame() {
   };
 
   return {
-    startGame: startGame
+    startGame: startGame,
   };
-}();
+})();
 
-document.querySelector('.play-btn').addEventListener('click', game.startGame);
+document.querySelector(".play-btn").addEventListener("click", game.startGame);
