@@ -259,6 +259,7 @@ h4 {
 
 .experienceCard {
   @include card;
+  padding: 1rem;
 
   .experienceCard__dates {
     font-style: italic;
@@ -267,6 +268,7 @@ h4 {
 
 .educationCard {
   @include card;
+  padding: 1rem;
 
   .educationCard__dates {
     font-style: italic;

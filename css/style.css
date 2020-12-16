@@ -179,7 +179,8 @@ h4 {
   max-width: 30rem;
   margin: 2rem 1rem;
   border: 0.2rem solid #f2f2f2;
-  box-shadow: -5px 5px 8px 0 #C1CCC6; }
+  box-shadow: -5px 5px 8px 0 #C1CCC6;
+  padding: 1rem; }
   .experienceCard:hover {
     box-shadow: -0.5rem 0.5rem 0.8rem 0 #343a40; }
   .experienceCard .experienceCard__dates {
@@ -190,7 +191,8 @@ h4 {
   max-width: 30rem;
   margin: 2rem 1rem;
   border: 0.2rem solid #f2f2f2;
-  box-shadow: -5px 5px 8px 0 #C1CCC6; }
+  box-shadow: -5px 5px 8px 0 #C1CCC6;
+  padding: 1rem; }
   .educationCard:hover {
     box-shadow: -0.5rem 0.5rem 0.8rem 0 #343a40; }
   .educationCard .educationCard__dates {
