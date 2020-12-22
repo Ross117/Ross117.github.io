@@ -133,7 +133,8 @@ h4 {
   width: 100%;
   max-width: 30rem;
   margin: 2rem 1rem;
-  border: 0.2rem solid #f2f2f2;
+  border: 0.1rem solid #cccccc;
+  border-radius: 1rem;
   box-shadow: -5px 5px 8px 0 #C1CCC6; }
   .skillsCard:hover {
     box-shadow: -0.5rem 0.5rem 0.8rem 0 #343a40; }
@@ -149,7 +150,8 @@ h4 {
   width: 100%;
   max-width: 30rem;
   margin: 2rem 1rem;
-  border: 0.2rem solid #f2f2f2;
+  border: 0.1rem solid #cccccc;
+  border-radius: 1rem;
   box-shadow: -5px 5px 8px 0 #C1CCC6;
   position: relative; }
   .projectCard:hover {
@@ -178,7 +180,8 @@ h4 {
   width: 100%;
   max-width: 30rem;
   margin: 2rem 1rem;
-  border: 0.2rem solid #f2f2f2;
+  border: 0.1rem solid #cccccc;
+  border-radius: 1rem;
   box-shadow: -5px 5px 8px 0 #C1CCC6;
   padding: 1rem; }
   .experienceCard:hover {
@@ -190,7 +193,8 @@ h4 {
   width: 100%;
   max-width: 30rem;
   margin: 2rem 1rem;
-  border: 0.2rem solid #f2f2f2;
+  border: 0.1rem solid #cccccc;
+  border-radius: 1rem;
   box-shadow: -5px 5px 8px 0 #C1CCC6;
   padding: 1rem; }
   .educationCard:hover {
