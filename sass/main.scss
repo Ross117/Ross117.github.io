@@ -282,11 +282,12 @@ h4 {
    display: flex;
    justify-content: center;
    margin-top: 2rem;
+   background-color: $colour-grey-dark;
 
   .icon__link {
-    margin: 1.2rem 1rem;
+    margin: 1.2rem 2rem;
     font-size: 4rem;
     text-decoration: none;
-    @include linkStateColours($colour-grey-dark, $colour-grey-dark, $colour-blue);
+    @include linkStateColours($colour-cream, $colour-cream, $colour-blue);
   }
 }

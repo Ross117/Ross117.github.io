@@ -206,14 +206,15 @@ h4 {
 .iconContainer {
   display: flex;
   justify-content: center;
-  margin-top: 2rem; }
+  margin-top: 2rem;
+  background-color: #343a40; }
   .iconContainer .icon__link {
-    margin: 1.2rem 1rem;
+    margin: 1.2rem 2rem;
     font-size: 4rem;
     text-decoration: none; }
     .iconContainer .icon__link:link {
-      color: #343a40; }
+      color: #f2f2f2; }
     .iconContainer .icon__link:visited {
-      color: #343a40; }
+      color: #f2f2f2; }
     .iconContainer .icon__link:hover {
       color: #729ae6; }
