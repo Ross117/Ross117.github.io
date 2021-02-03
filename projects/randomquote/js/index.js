@@ -40,7 +40,7 @@ $(".tweetQuote").on("click", () => {
   //   handle errors
   if (tweet === false) return;
 
-  const link = "https://twitter.com/home?status=" + tweet;
+  const link = "https://twitter.com/intent/tweet?text=" + tweet;
   //   give user the option to tweet a quote
   window.open(link);
 });
