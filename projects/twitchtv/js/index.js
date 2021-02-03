@@ -2,14 +2,14 @@ $(window).on("load", function () {
   "use strict";
 
   var users = [
+    "ESL_SC2",
     "OgamingSC2",
     "cretetion",
-    "sips_",
-    "Punz",
-    "ofmanny",
-    "Symfuhny",
-    "sodapoppin",
-    "LCK",
+    "freecodecamp",
+    "storbeck",
+    "habathcx",
+    "RobotCaleb",
+    "noobs2ninjas",
   ];
   var promisesArr = [];
   var $userContainer = $(".userContainer");
@@ -56,7 +56,7 @@ function buildProfileHTML(username, img, link) {
 
   var statusBox = "<span class='streamStatus'>" + "<i class='fa fa-circle' aria-hidden='true'></i></span>";
 
-  var html = "<div class='" + username + " userBox'>" + statusBox + "<p><img src=" + img + " alt='(Image not available)' class='img-responsive'><a href=" + link + ">" + username + "</a></p></div>";
+  var html = "<div class='" + username + " userBox'>" + statusBox + "<p class='header'><img src=" + img + " alt='(Image not available)' class='img-responsive'><a href=" + link + ">" + username + "</a></p></div>";
 
   return html;
 }

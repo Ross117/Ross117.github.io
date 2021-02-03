@@ -8,6 +8,10 @@ img {
   margin-right: 10px;
 }
 
+.userContainer p:not(.header) {
+  margin-left: 5px;
+}
+
 .userBox {
   background-color: #FFFFFF;
   position: relative;
