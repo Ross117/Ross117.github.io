@@ -1,7 +1,16 @@
 $(window).on("load", function () {
   "use strict";
 
-  var users = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"];
+  var users = [
+    "OgamingSC2",
+    "cretetion",
+    "sips_",
+    "Punz",
+    "ofmanny",
+    "Symfuhny",
+    "sodapoppin",
+    "LCK",
+  ];
   var promisesArr = [];
   var $userContainer = $(".userContainer");
 
