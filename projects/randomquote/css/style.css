@@ -1,7 +1,6 @@
 body {
   font-family: 'Montaga', sans-serif;
 }
-
 .quoteContainer {
   top: 50px;
 }
@@ -10,14 +9,7 @@ body {
   font-style: italic;
 }
 
-.newQuote {
+button {
   margin: 10px;
-}
-
-.tweetQuote {
-  margin: 10px;
-}
-
-.attribution {
-  font-style: italic;
+  cursor: pointer;
 }
