@@ -113,7 +113,7 @@ function addSkycon(icon) {
 function handleErr() {
   "use strict";
 
-  $("div").not(".container-fluid").html("");
+  $("div").not(".container").html("");
 }
 
 // add event to button which switches between Celcius & Farenheit

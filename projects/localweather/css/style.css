@@ -1,14 +1,18 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh
+}
+
 body {
   background-color: #e74c3c;
   font-family: 'Montaga', Verdana, sans-serif;
   color: #FFF;
 }
 
-.getWeatherInfo {
+button {
   margin: 10px;
-}
-
-.tempSwitch {
-  margin: 10px;
+  cursor: pointer;
 }
 
