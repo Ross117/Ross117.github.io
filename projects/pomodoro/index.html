@@ -1,59 +1,50 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Pomodoro Clock</title>
   <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pomodoro Clock</title>
-  
-  
-      <link rel="stylesheet" href="css/style.css">
-
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="css/style.css">
+  <title>Pomodoro Clock</title>
 </head>
 
 <body>
 
   <audio class="js-timer" src="https://www.soundjay.com/clock/sounds/alarm-clock-01.mp3" autostart="false"></audio>
 
-  <div class="container">
+  <main class="container">
 
     <h1>Pomodoro Clock</h1>
 
-    <div class="form-container">
+    <section class="form-container">
       <form>
-        <div class="prompt">
-          <label>Work:<input type="text" class="workTime" value="00:25:00" /></label>
-        </div>
-        <div class="prompt">
-          <label>Break:<input type="text" class="breakTime" value="00:05:00" /></label>
+        <div class="promptContainer">
+          <label for="workTime">Work:<input type="text" id="workTime" class="prompt" value="00:25:00" /></label>
+          <label for="breakTime">Break:<input type="text" id="breakTime" class="prompt" value="00:05:00" /></label>
         </div>
       </form>
-    </div>
+    </section>
 
     <p class="err-msg js-err-msg"></p>
 
     <p class="indicator js-indicator">Work Time</p>
 
-    <div class="clock-container">
+    <section class="clock-container">
       <input type="text" class="clock js-clock" value="00:25:00" readonly />
-    </div>
+    </section>
 
-    <div class="btn-container">
+    <section class="btn-container">
       <button type="button" class="js-start-clock">Start Clock</button>
       <button type="button" class="js-pause-clock">Pause Clock</button>
-    </div>
+    </section>
 
-  </div>
-  
-  
+  </main>
 
-    <script  src="js/index.js"></script>
-
-
-
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <script src="js/index.js" type="text/babel"></script>
 
 </body>
 
