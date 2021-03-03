@@ -13,33 +13,34 @@
 
 <body>
 
-  <audio class="js-timer" src="https://www.soundjay.com/clock/sounds/alarm-clock-01.mp3" autostart="false"></audio>
+  <audio class="js-timer" src="https://www.soundjay.com/clock/sounds/alarm-clock-01.mp3"></audio>
 
   <main class="container">
 
     <h1>Pomodoro Clock</h1>
 
-    <section class="form-container">
+    <div class="form-container">
       <form>
         <div class="promptContainer">
           <label for="workTime">Work:<input type="text" id="workTime" class="prompt" value="00:25:00" /></label>
           <label for="breakTime">Break:<input type="text" id="breakTime" class="prompt" value="00:05:00" /></label>
         </div>
+        <p class="err-msg js-err-msg"></p>
       </form>
-    </section>
+    </div>
 
-    <p class="err-msg js-err-msg"></p>
+    <div>
+      <p class="indicator js-indicator">Work Time</p>
+    </div>
 
-    <p class="indicator js-indicator">Work Time</p>
+    <div class="clock-container">
+      <input type="text" class="clock js-clock" tabindex="-1" value="00:25:00" readonly />
+    </div>
 
-    <section class="clock-container">
-      <input type="text" class="clock js-clock" value="00:25:00" readonly />
-    </section>
-
-    <section class="btn-container">
+    <div class="btn-container">
       <button type="button" class="js-start-clock">Start Clock</button>
       <button type="button" class="js-pause-clock">Pause Clock</button>
-    </section>
+    </div>
 
   </main>
 
