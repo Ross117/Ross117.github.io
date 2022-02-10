@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/Ross117/Ross117.github.io#readme",
   "devDependencies": {
-    "node-sass": "^4.14.0"
+    "node-sass": "^7.0.0"
   }
 }
